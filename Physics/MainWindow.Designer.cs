@@ -40,6 +40,7 @@
             this.MassLabel = new System.Windows.Forms.Label();
             this.MassInput = new System.Windows.Forms.TextBox();
             this.WindowContainer = new System.Windows.Forms.TableLayoutPanel();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.InputContainer.SuspendLayout();
             this.gContainer.SuspendLayout();
             this.HeightContainer.SuspendLayout();
@@ -194,6 +195,7 @@
             this.WindowContainer.ColumnCount = 1;
             this.WindowContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.WindowContainer.Controls.Add(this.InputContainer, 0, 0);
+            this.WindowContainer.Controls.Add(this.cartesianChart1, 0, 1);
             this.WindowContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WindowContainer.Location = new System.Drawing.Point(0, 0);
             this.WindowContainer.Name = "WindowContainer";
@@ -202,6 +204,15 @@
             this.WindowContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.WindowContainer.Size = new System.Drawing.Size(1006, 753);
             this.WindowContainer.TabIndex = 1;
+            // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartesianChart1.Location = new System.Drawing.Point(3, 253);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(1000, 497);
+            this.cartesianChart1.TabIndex = 1;
+            this.cartesianChart1.Text = "cartesianChart1";
             // 
             // MainWindow
             // 
@@ -239,6 +250,7 @@
         private System.Windows.Forms.TableLayoutPanel gContainer;
         private System.Windows.Forms.Label gLabel;
         private System.Windows.Forms.TextBox gInput;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }
 
