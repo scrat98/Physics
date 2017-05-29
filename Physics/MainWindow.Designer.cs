@@ -249,7 +249,7 @@
             this.K3Label.Name = "K3Label";
             this.K3Label.Size = new System.Drawing.Size(71, 52);
             this.K3Label.TabIndex = 0;
-            this.K3Label.Text = "K3";
+            this.K3Label.Text = "K₃";
             this.K3Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // K3Input
@@ -288,7 +288,7 @@
             this.K2Label.Name = "K2Label";
             this.K2Label.Size = new System.Drawing.Size(71, 52);
             this.K2Label.TabIndex = 0;
-            this.K2Label.Text = "K2";
+            this.K2Label.Text = "K₂";
             this.K2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // K2Input
@@ -327,7 +327,7 @@
             this.K1Label.Name = "K1Label";
             this.K1Label.Size = new System.Drawing.Size(71, 52);
             this.K1Label.TabIndex = 0;
-            this.K1Label.Text = "K1";
+            this.K1Label.Text = "K₁";
             this.K1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // K1Input
@@ -366,7 +366,7 @@
             this.gLabel.Name = "gLabel";
             this.gLabel.Size = new System.Drawing.Size(71, 54);
             this.gLabel.TabIndex = 0;
-            this.gLabel.Text = "g(m/s2)";
+            this.gLabel.Text = "g(m/s²)";
             this.gLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gInput
@@ -406,7 +406,7 @@
             this.HeightLabel.Name = "HeightLabel";
             this.HeightLabel.Size = new System.Drawing.Size(71, 25);
             this.HeightLabel.TabIndex = 0;
-            this.HeightLabel.Text = "H0(m)";
+            this.HeightLabel.Text = "H₀(m)";
             this.HeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // HeightInput
@@ -496,7 +496,7 @@
             this.VelLabel.Name = "VelLabel";
             this.VelLabel.Size = new System.Drawing.Size(69, 23);
             this.VelLabel.TabIndex = 0;
-            this.VelLabel.Text = "V0";
+            this.VelLabel.Text = "V₀";
             this.VelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // VelInput
@@ -583,7 +583,7 @@
             this.VelK1Label.Name = "VelK1Label";
             this.VelK1Label.Size = new System.Drawing.Size(69, 50);
             this.VelK1Label.TabIndex = 0;
-            this.VelK1Label.Text = "V1";
+            this.VelK1Label.Text = "V₁";
             this.VelK1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // VelK2Label
@@ -595,7 +595,7 @@
             this.VelK2Label.Name = "VelK2Label";
             this.VelK2Label.Size = new System.Drawing.Size(69, 50);
             this.VelK2Label.TabIndex = 2;
-            this.VelK2Label.Text = "V2";
+            this.VelK2Label.Text = "V₂";
             this.VelK2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // VelK1Input

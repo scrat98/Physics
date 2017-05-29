@@ -170,7 +170,22 @@ namespace Physics
             else errorInput(ref AngInput, ref v0);
             Log();
         }
-
+        private void VelK2Input_TextChanged(object sender, EventArgs e)
+        {
+            if (!Double.TryParse(VelK2Input.Text, out v2.value)) {
+                errorInput(ref VelK2Input, ref v2);
+                return;
+            }
+            if (v2.value >= v1.value) {
+                okInput(ref VelK2Input, ref v2);
+                okInput(ref VelK1Input, ref v1);
+            }
+            else {
+                errorInput(ref VelK1Input, ref v1);
+                errorInput(ref VelK2Input, ref v2);
+            }
+                Log();
+         }
         private void VelK1Input_TextChanged(object sender, EventArgs e)
         {
             if (!Double.TryParse(VelK1Input.Text, out v1.value))
@@ -178,23 +193,25 @@ namespace Physics
                 errorInput(ref VelK1Input , ref v1);
                 return;
             }
-            if (v1.value >= 0) okInput(ref VelK1Input, ref v1);
-            else errorInput(ref VelK1Input, ref v1);
-            Log();
-        }
-
-        private void VelK2Input_TextChanged(object sender, EventArgs e)
-        {
-            if (!Double.TryParse(VelK2Input.Text, out v2.value))
+            if (v1.value < 0)
             {
-                errorInput(ref VelK2Input, ref v2);
+                errorInput(ref VelK1Input, ref v1);
                 return;
             }
-            if (v2.value >= v1.value) okInput(ref VelK2Input, ref v2);
-            else errorInput(ref VelK1Input, ref v1);
-
+            if (v2.value >= v1.value) 
+            {
+                okInput(ref VelK2Input, ref v2);
+                okInput(ref VelK1Input, ref v1);
+            }
+            else
+            {
+                errorInput(ref VelK1Input, ref v1);
+                errorInput(ref VelK2Input, ref v2);
+            }
             Log();
         }
+
+        
 
         private void K1Input_TextChanged(object sender, EventArgs e)
         {
