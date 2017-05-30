@@ -92,11 +92,11 @@ namespace Physics
         public MainWindow()
         {
             InitializeComponent();
-<<<<<<< HEAD
+
             var myModel = new PlotModel { Title = "Example 1" };
             myModel.Series.Add(new FunctionSeries(Math.Cos, 0, 10, 0.1, "cos(x)"));
             this.plotView1.Model = myModel;
-=======
+
             InitArgs();
         }
 
@@ -298,7 +298,6 @@ namespace Physics
         private void SaturnG_Click(object sender, EventArgs e)
         {
             gInput.Text = "7,21";
->>>>>>> Data_Input_Window
         }
 
         private void UranusG_Click(object sender, EventArgs e)
