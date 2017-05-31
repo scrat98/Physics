@@ -72,7 +72,9 @@
             this.VenusG = new System.Windows.Forms.Button();
             this.MercuryG = new System.Windows.Forms.Button();
             this.WindowContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.plotView1 = new OxyPlot.WindowsForms.PlotView();
+            this.PlotTabs = new System.Windows.Forms.TabControl();
+            this.HeightPage = new System.Windows.Forms.TabPage();
+            this.HeightPlot = new OxyPlot.WindowsForms.PlotView();
             this.InputContainer.SuspendLayout();
             this.PlanetContainer3.SuspendLayout();
             this.PlanetContainer2.SuspendLayout();
@@ -88,6 +90,8 @@
             this.VelKContainer.SuspendLayout();
             this.PlanetContainer1.SuspendLayout();
             this.WindowContainer.SuspendLayout();
+            this.PlotTabs.SuspendLayout();
+            this.HeightPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // InputContainer
@@ -132,7 +136,7 @@
             this.PlanetContainer3.Controls.Add(this.JupiterG, 0, 0);
             this.PlanetContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PlanetContainer3.Location = new System.Drawing.Point(751, 179);
-            this.PlanetContainer3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PlanetContainer3.Margin = new System.Windows.Forms.Padding(4);
             this.PlanetContainer3.Name = "PlanetContainer3";
             this.PlanetContainer3.RowCount = 2;
             this.PlanetContainer3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -145,7 +149,7 @@
             this.PlanetContainer3.SetColumnSpan(this.PlutoG, 2);
             this.PlutoG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PlutoG.Location = new System.Drawing.Point(4, 35);
-            this.PlutoG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PlutoG.Margin = new System.Windows.Forms.Padding(4);
             this.PlutoG.Name = "PlutoG";
             this.PlutoG.Size = new System.Drawing.Size(236, 24);
             this.PlutoG.TabIndex = 2;
@@ -157,7 +161,7 @@
             // 
             this.SaturnG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SaturnG.Location = new System.Drawing.Point(126, 4);
-            this.SaturnG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SaturnG.Margin = new System.Windows.Forms.Padding(4);
             this.SaturnG.Name = "SaturnG";
             this.SaturnG.Size = new System.Drawing.Size(114, 23);
             this.SaturnG.TabIndex = 1;
@@ -169,7 +173,7 @@
             // 
             this.JupiterG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.JupiterG.Location = new System.Drawing.Point(4, 4);
-            this.JupiterG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.JupiterG.Margin = new System.Windows.Forms.Padding(4);
             this.JupiterG.Name = "JupiterG";
             this.JupiterG.Size = new System.Drawing.Size(114, 23);
             this.JupiterG.TabIndex = 0;
@@ -187,7 +191,7 @@
             this.PlanetContainer2.Controls.Add(this.EarthG, 0, 0);
             this.PlanetContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PlanetContainer2.Location = new System.Drawing.Point(502, 179);
-            this.PlanetContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PlanetContainer2.Margin = new System.Windows.Forms.Padding(4);
             this.PlanetContainer2.Name = "PlanetContainer2";
             this.PlanetContainer2.RowCount = 2;
             this.PlanetContainer2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -200,7 +204,7 @@
             this.PlanetContainer2.SetColumnSpan(this.NeptuneG, 2);
             this.NeptuneG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NeptuneG.Location = new System.Drawing.Point(4, 35);
-            this.NeptuneG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NeptuneG.Margin = new System.Windows.Forms.Padding(4);
             this.NeptuneG.Name = "NeptuneG";
             this.NeptuneG.Size = new System.Drawing.Size(233, 24);
             this.NeptuneG.TabIndex = 2;
@@ -212,7 +216,7 @@
             // 
             this.MarsG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MarsG.Location = new System.Drawing.Point(124, 4);
-            this.MarsG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MarsG.Margin = new System.Windows.Forms.Padding(4);
             this.MarsG.Name = "MarsG";
             this.MarsG.Size = new System.Drawing.Size(113, 23);
             this.MarsG.TabIndex = 1;
@@ -224,7 +228,7 @@
             // 
             this.EarthG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EarthG.Location = new System.Drawing.Point(4, 4);
-            this.EarthG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EarthG.Margin = new System.Windows.Forms.Padding(4);
             this.EarthG.Name = "EarthG";
             this.EarthG.Size = new System.Drawing.Size(112, 23);
             this.EarthG.TabIndex = 0;
@@ -484,7 +488,7 @@
             this.VelContainer.Controls.Add(this.VelInput, 1, 0);
             this.VelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VelContainer.Location = new System.Drawing.Point(502, 4);
-            this.VelContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VelContainer.Margin = new System.Windows.Forms.Padding(4);
             this.VelContainer.Name = "VelContainer";
             this.VelContainer.RowCount = 1;
             this.VelContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -508,7 +512,7 @@
             // 
             this.VelInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.VelInput.Location = new System.Drawing.Point(104, 4);
-            this.VelInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VelInput.Margin = new System.Windows.Forms.Padding(4);
             this.VelInput.Name = "VelInput";
             this.VelInput.Size = new System.Drawing.Size(133, 22);
             this.VelInput.TabIndex = 1;
@@ -523,7 +527,7 @@
             this.AngContainer.Controls.Add(this.AngInput, 1, 0);
             this.AngContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AngContainer.Location = new System.Drawing.Point(751, 4);
-            this.AngContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AngContainer.Margin = new System.Windows.Forms.Padding(4);
             this.AngContainer.Name = "AngContainer";
             this.AngContainer.RowCount = 1;
             this.AngContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -548,7 +552,7 @@
             // 
             this.AngInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.AngInput.Location = new System.Drawing.Point(104, 4);
-            this.AngInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AngInput.Margin = new System.Windows.Forms.Padding(4);
             this.AngInput.Name = "AngInput";
             this.AngInput.Size = new System.Drawing.Size(136, 22);
             this.AngInput.TabIndex = 1;
@@ -568,7 +572,7 @@
             this.VelKContainer.Controls.Add(this.VelK1Input, 1, 0);
             this.VelKContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VelKContainer.Location = new System.Drawing.Point(253, 40);
-            this.VelKContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VelKContainer.Margin = new System.Windows.Forms.Padding(4);
             this.VelKContainer.Name = "VelKContainer";
             this.VelKContainer.RowCount = 1;
             this.VelKContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -579,7 +583,7 @@
             // 
             this.VelK2Input.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.VelK2Input.Location = new System.Drawing.Point(475, 20);
-            this.VelK2Input.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VelK2Input.Margin = new System.Windows.Forms.Padding(4);
             this.VelK2Input.Name = "VelK2Input";
             this.VelK2Input.Size = new System.Drawing.Size(263, 22);
             this.VelK2Input.TabIndex = 4;
@@ -615,7 +619,7 @@
             // 
             this.VelK1Input.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.VelK1Input.Location = new System.Drawing.Point(104, 20);
-            this.VelK1Input.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VelK1Input.Margin = new System.Windows.Forms.Padding(4);
             this.VelK1Input.Name = "VelK1Input";
             this.VelK1Input.Size = new System.Drawing.Size(263, 22);
             this.VelK1Input.TabIndex = 3;
@@ -631,7 +635,7 @@
             this.PlanetContainer1.Controls.Add(this.MercuryG, 0, 0);
             this.PlanetContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PlanetContainer1.Location = new System.Drawing.Point(253, 179);
-            this.PlanetContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PlanetContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.PlanetContainer1.Name = "PlanetContainer1";
             this.PlanetContainer1.RowCount = 2;
             this.PlanetContainer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -644,7 +648,7 @@
             this.PlanetContainer1.SetColumnSpan(this.UranusG, 2);
             this.UranusG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UranusG.Location = new System.Drawing.Point(4, 35);
-            this.UranusG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.UranusG.Margin = new System.Windows.Forms.Padding(4);
             this.UranusG.Name = "UranusG";
             this.UranusG.Size = new System.Drawing.Size(233, 24);
             this.UranusG.TabIndex = 2;
@@ -656,7 +660,7 @@
             // 
             this.VenusG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VenusG.Location = new System.Drawing.Point(124, 4);
-            this.VenusG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.VenusG.Margin = new System.Windows.Forms.Padding(4);
             this.VenusG.Name = "VenusG";
             this.VenusG.Size = new System.Drawing.Size(113, 23);
             this.VenusG.TabIndex = 1;
@@ -668,7 +672,7 @@
             // 
             this.MercuryG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MercuryG.Location = new System.Drawing.Point(4, 4);
-            this.MercuryG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MercuryG.Margin = new System.Windows.Forms.Padding(4);
             this.MercuryG.Name = "MercuryG";
             this.MercuryG.Size = new System.Drawing.Size(112, 23);
             this.MercuryG.TabIndex = 0;
@@ -681,7 +685,7 @@
             this.WindowContainer.ColumnCount = 1;
             this.WindowContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.WindowContainer.Controls.Add(this.InputContainer, 0, 0);
-            this.WindowContainer.Controls.Add(this.plotView1, 0, 1);
+            this.WindowContainer.Controls.Add(this.PlotTabs, 0, 1);
             this.WindowContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WindowContainer.Location = new System.Drawing.Point(0, 0);
             this.WindowContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -692,19 +696,38 @@
             this.WindowContainer.Size = new System.Drawing.Size(1005, 753);
             this.WindowContainer.TabIndex = 1;
             // 
-            // plotView1
+            // PlotTabs
             // 
-            this.plotView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.plotView1.Location = new System.Drawing.Point(4, 254);
-            this.plotView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.plotView1.Name = "plotView1";
-            this.plotView1.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.plotView1.Size = new System.Drawing.Size(997, 495);
-            this.plotView1.TabIndex = 1;
-            this.plotView1.Text = "plotView1";
-            this.plotView1.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
-            this.plotView1.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.plotView1.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            this.PlotTabs.Controls.Add(this.HeightPage);
+            this.PlotTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PlotTabs.Location = new System.Drawing.Point(3, 253);
+            this.PlotTabs.Name = "PlotTabs";
+            this.PlotTabs.SelectedIndex = 0;
+            this.PlotTabs.Size = new System.Drawing.Size(999, 497);
+            this.PlotTabs.TabIndex = 1;
+            // 
+            // HeightPage
+            // 
+            this.HeightPage.Controls.Add(this.HeightPlot);
+            this.HeightPage.Location = new System.Drawing.Point(4, 25);
+            this.HeightPage.Name = "HeightPage";
+            this.HeightPage.Padding = new System.Windows.Forms.Padding(3);
+            this.HeightPage.Size = new System.Drawing.Size(991, 468);
+            this.HeightPage.TabIndex = 2;
+            this.HeightPage.Text = "H(t)";
+            this.HeightPage.UseVisualStyleBackColor = true;
+            // 
+            // HeightPlot
+            // 
+            this.HeightPlot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HeightPlot.Location = new System.Drawing.Point(3, 3);
+            this.HeightPlot.Name = "HeightPlot";
+            this.HeightPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.HeightPlot.Size = new System.Drawing.Size(985, 462);
+            this.HeightPlot.TabIndex = 0;
+            this.HeightPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.HeightPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.HeightPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
             // MainWindow
             // 
@@ -740,6 +763,8 @@
             this.VelKContainer.PerformLayout();
             this.PlanetContainer1.ResumeLayout(false);
             this.WindowContainer.ResumeLayout(false);
+            this.PlotTabs.ResumeLayout(false);
+            this.HeightPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -758,7 +783,6 @@
         private System.Windows.Forms.TableLayoutPanel gContainer;
         private System.Windows.Forms.Label gLabel;
         private System.Windows.Forms.TextBox gInput;
-        private OxyPlot.WindowsForms.PlotView plotView1;
         private System.Windows.Forms.TableLayoutPanel VelContainer;
         private System.Windows.Forms.Label VelLabel;
         private System.Windows.Forms.TextBox VelInput;
@@ -791,6 +815,9 @@
         private System.Windows.Forms.Button NeptuneG;
         private System.Windows.Forms.Button MarsG;
         private System.Windows.Forms.Button EarthG;
+        private System.Windows.Forms.TabControl PlotTabs;
+        private System.Windows.Forms.TabPage HeightPage;
+        private OxyPlot.WindowsForms.PlotView HeightPlot;
     }
 }
 

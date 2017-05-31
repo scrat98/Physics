@@ -10,21 +10,104 @@ using System.Windows.Forms;
 
 using OxyPlot;
 using OxyPlot.Series;
+using OxyPlot.Axes;
+using OxyPlot.Annotations;
 
 namespace Physics
 {
     public partial class MainWindow : Form
     {
-        struct Argument
+        class Argument
         {
             public bool ok;
             public double value;
         };
 
+        private static readonly double delay = 0.1;
+
+        class Data
+        {
+            private double theory, real;
+            private LineSeries theoryData, realData;
+            private PlotModel model;
+
+            public Data(string title)
+            {
+                theory = 0;
+                theoryData = new LineSeries();
+                theoryData.Smooth = true;
+                theoryData.Title = "without air";
+
+                real = 0;
+                realData = new LineSeries();
+                realData.Smooth = true;
+                realData.Title = "with air";
+
+                model = new PlotModel();
+                
+                model.Title = title;
+                model.Axes.Add(new LinearAxis
+                {
+                    MajorGridlineStyle = LineStyle.Solid,
+                    MinorGridlineStyle = LineStyle.Dot,
+                    Position = AxisPosition.Bottom,
+                    AbsoluteMinimum = 0
+                });
+                model.Axes.Add(new LinearAxis
+                {
+                    MajorGridlineStyle = LineStyle.Solid,
+                    MinorGridlineStyle = LineStyle.Dot,
+                    Position = AxisPosition.Left,
+                    AbsoluteMinimum = 0
+                });
+            }
+
+            public void Init(double val)
+            {
+                theoryData.Points.Clear();
+                realData.Points.Clear();
+                model.Series.Clear();
+
+                theory = real = val;
+                theoryData.Points.Add(new DataPoint(0, theory));
+                realData.Points.Add(new DataPoint(0, real));
+            }
+
+            public void TheoryUpdate(double newTheory, double t)
+            {
+                theory = newTheory;
+                theoryData.Points.Add(new DataPoint(t, theory));
+            }
+
+            public void RealUpdate(double newReal, double t)
+            {
+                real = newReal;
+                realData.Points.Add(new DataPoint(t, real));
+            }
+
+            public PlotModel GetModel()
+            {
+                model.Series.Clear();
+                model.Series.Add(theoryData);
+                model.Series.Add(realData);
+                return model;
+            }
+
+            public double getReal()
+            {
+                return real;
+            }
+
+            public double getTheory()
+            {
+                return theory;
+            }
+        };
+
         private Argument mass;     // mass of the body
         private Argument defaultH; // start height
         private Argument g;        // g
-        private Argument angle;    // [0; pi/2]
+        private Argument angle;    // [0; 90]
 
         private Argument v0;
         private Argument v1;      // first Boundary value
@@ -33,6 +116,10 @@ namespace Physics
         private Argument k1;      // first interval value
         private Argument k2;      // second inteval value
         private Argument k3;      // third interval value
+
+        Data Vx, Vy, V;
+        Data H, S;
+        Data Ax, Ay, A;
 
         private void Log()
         {
@@ -92,10 +179,27 @@ namespace Physics
         public MainWindow()
         {
             InitializeComponent();
+            Vx = new Data("Vx(t)");
+            Vy = new Data("Vy(t)");
+            V = new Data("V(t)");
+            H = new Data("H(t)");
+            S = new Data("S(t)");
+            Ax = new Data("Ax(t)");
+            Ay = new Data("Ay(t)");
+            A = new Data("A(t)");
 
-            var myModel = new PlotModel { Title = "Example 1" };
-            myModel.Series.Add(new FunctionSeries(Math.Cos, 0, 10, 0.1, "cos(x)"));
-            this.plotView1.Model = myModel;
+            mass = new Argument();
+            defaultH = new Argument();
+            g = new Argument();
+            angle = new Argument();
+
+            v0 = new Argument();
+            v1 = new Argument();
+            v2 = new Argument();
+
+            k1 = new Argument();
+            k2 = new Argument();
+            k3 = new Argument();
 
             InitArgs();
         }
@@ -114,13 +218,69 @@ namespace Physics
             K3Input.Text = "0,47";
         }
 
-        private void errorInput(ref TextBox input, ref Argument arg)
+        private double DegreeToRadian(double angle)
+        {
+            return Math.PI * angle / 180.0;
+        }
+
+        private void Draw()
+        {
+            Log();
+
+            // check if OK and draw
+            // TODO
+
+            double curT = 0;
+
+            Ax.Init(0);
+            Ay.Init(0);
+            A.Init(0);
+
+            V.Init(v0.value);
+            Vx.Init(v0.value * Math.Cos(DegreeToRadian(angle.value)));
+            Vy.Init(v0.value * Math.Sin(DegreeToRadian(angle.value)));
+
+            H.Init(defaultH.value);
+            S.Init(0);
+            
+            while (true)
+            {
+                curT += delay;
+
+                // theory update
+                if(H.getTheory() > 0)
+                {
+                    Ax.TheoryUpdate(0, curT);
+                    Ay.TheoryUpdate(-g.value, curT);
+                    A.TheoryUpdate(Math.Sqrt(Math.Pow(Ax.getTheory(),2) + Math.Pow(Ay.getTheory(), 2)), curT);
+
+                    Vx.TheoryUpdate(Vx.getTheory() - Ax.getTheory() * delay, curT);
+                    Vy.TheoryUpdate(Vy.getTheory() - Ay.getTheory() * delay, curT);
+                    V.TheoryUpdate(Math.Sqrt(Math.Pow(Vx.getTheory(), 2) + Math.Pow(Vy.getTheory(), 2)), curT);
+
+                    H.TheoryUpdate(H.getTheory() + Vy.getTheory() * delay + Ay.getTheory() * curT * curT / 2, curT);
+                    S.TheoryUpdate(S.getTheory() + Vx.getTheory() * delay + Ax.getTheory() * curT * curT / 2, curT);
+                }
+
+                // real update
+                // TODO
+
+                // exit if we are fall
+                //if (H.getReal() == 0 && H.getTheory() == 0) break;
+                if (H.getTheory() <= 0) break;
+            }
+
+            HeightPlot.Model = H.GetModel();
+            HeightPlot.Model.InvalidatePlot(true);
+        }
+
+        private void errorInput(TextBox input, Argument arg)
         {
             input.BackColor = Color.Red;
             arg.ok = false;
         }
 
-        private void okInput(ref TextBox input, ref Argument arg)
+        private void okInput(TextBox input, Argument arg)
         {
             input.BackColor = Color.White;
             arg.ok = true;
@@ -130,144 +290,151 @@ namespace Physics
         {
             if (!Double.TryParse(MassInput.Text, out mass.value))
             {
-                errorInput(ref MassInput, ref mass);
+                errorInput(MassInput, mass);
                 return;
             }
 
-            if (mass.value > 0) okInput(ref MassInput, ref mass);
-            else errorInput(ref MassInput, ref mass);
+            if (mass.value > 0) okInput( MassInput, mass);
+            else errorInput(MassInput, mass);
 
-            Log();
+            Draw();
         }
 
         private void HeightInput_TextChanged(object sender, EventArgs e)
         {
             if (!Double.TryParse(HeightInput.Text, out defaultH.value))
             {
-                errorInput(ref HeightInput, ref defaultH);
+                errorInput( HeightInput,  defaultH);
                 return;
             }
-            if (defaultH.value >= 0) okInput(ref HeightInput, ref defaultH);
-            else errorInput(ref HeightInput, ref defaultH);
-            Log();
+            if (defaultH.value >= 0) okInput( HeightInput,  defaultH);
+            else errorInput( HeightInput,  defaultH);
+            Draw();
         }
 
         private void VelInput_TextChanged(object sender, EventArgs e)
         {
             if (!Double.TryParse(VelInput.Text, out v0.value))
             {
-                errorInput(ref VelInput, ref v0);
+                errorInput( VelInput,  v0);
                 return;
             }
-            if (v0.value > 0) okInput(ref VelInput, ref v0);
-            else errorInput(ref VelInput, ref v0);
-            Log();
+            if (v0.value > 0) okInput( VelInput,  v0);
+            else errorInput( VelInput,  v0);
+            Draw();
         }
 
         private void AngInput_TextChanged(object sender, EventArgs e)
         {
             if (!Double.TryParse(AngInput.Text, out angle.value))
             {
-                errorInput(ref AngInput, ref v0);
+                errorInput( AngInput,  v0);
                 return;
             }
-            if (angle.value >= 0 && angle.value <= 90) okInput(ref AngInput, ref angle);
-            else errorInput(ref AngInput, ref v0);
-            Log();
+            if (angle.value >= 0 && angle.value <= 90) okInput( AngInput,  angle);
+            else errorInput( AngInput,  v0);
+            Draw();
         }
+
         private void VelK2Input_TextChanged(object sender, EventArgs e)
         {
-            if (!Double.TryParse(VelK2Input.Text, out v2.value)) {
-                errorInput(ref VelK2Input, ref v2);
+            if (!Double.TryParse(VelK2Input.Text, out v2.value))
+            {
+                errorInput( VelK2Input,  v2);
                 return;
             }
-            if (v2.value >= v1.value) {
-                okInput(ref VelK2Input, ref v2);
-                okInput(ref VelK1Input, ref v1);
+            if (v2.value >= v1.value)
+            {
+                okInput( VelK2Input,  v2);
+                okInput( VelK1Input,  v1);
             }
-            else {
-                errorInput(ref VelK1Input, ref v1);
-                errorInput(ref VelK2Input, ref v2);
+            else
+            {
+                errorInput( VelK1Input,  v1);
+                errorInput( VelK2Input,  v2);
             }
-                Log();
-         }
+
+            Draw();
+        }
+
         private void VelK1Input_TextChanged(object sender, EventArgs e)
         {
             if (!Double.TryParse(VelK1Input.Text, out v1.value))
             {
-                errorInput(ref VelK1Input , ref v1);
+                errorInput( VelK1Input ,  v1);
                 return;
             }
+
             if (v1.value < 0)
             {
-                errorInput(ref VelK1Input, ref v1);
+                errorInput( VelK1Input,  v1);
                 return;
             }
-            if (v2.value >= v1.value) 
+
+            if (v2.value >= v1.value)
             {
-                okInput(ref VelK2Input, ref v2);
-                okInput(ref VelK1Input, ref v1);
+                okInput( VelK2Input,  v2);
+                okInput( VelK1Input,  v1);
             }
             else
             {
-                errorInput(ref VelK1Input, ref v1);
-                errorInput(ref VelK2Input, ref v2);
+                errorInput( VelK1Input,  v1);
+                errorInput( VelK2Input,  v2);
             }
-            Log();
-        }
 
-        
+            Draw();
+        }
 
         private void K1Input_TextChanged(object sender, EventArgs e)
         {
             if (!Double.TryParse(K1Input.Text, out k1.value))
             {
-                errorInput(ref K1Input, ref k1);
+                errorInput( K1Input,  k1);
                 return;
             }
-            if (k1.value >=0) okInput(ref K1Input, ref k1);
-            else errorInput(ref K1Input, ref k1);
+            if (k1.value >=0) okInput( K1Input,  k1);
+            else errorInput( K1Input,  k1);
 
-            Log();
+            Draw();
         }
 
         private void K2Input_TextChanged(object sender, EventArgs e)
         {
             if (!Double.TryParse(K2Input.Text, out k2.value))
             {
-                errorInput(ref K2Input, ref k2);
+                errorInput( K2Input,  k2);
                 return;
             }
-            if (k2.value > 0) okInput(ref K2Input, ref k2);
-            else errorInput(ref K2Input, ref k2);
+            if (k2.value > 0) okInput( K2Input,  k2);
+            else errorInput( K2Input,  k2);
 
-            Log();
+            Draw();
         }
 
         private void K3Input_TextChanged(object sender, EventArgs e)
         {
             if (!Double.TryParse(K3Input.Text, out k3.value))
             {
-                errorInput(ref K3Input, ref k3);
+                errorInput( K3Input,  k3);
                 return;
             }
-            if (k3.value > 0) okInput(ref K3Input, ref k3);
-            else errorInput(ref K3Input, ref k3);
+            if (k3.value > 0) okInput( K3Input,  k3);
+            else errorInput( K3Input,  k3);
 
-            Log();
+            Draw();
         }
 
         private void gInput_TextChanged(object sender, EventArgs e)
         {
             if (!Double.TryParse(gInput.Text, out g.value))
             {
-                errorInput(ref gInput, ref g);
+                errorInput( gInput,  g);
                 return;
             }
-            if (g.value > 0) okInput(ref gInput, ref g);
-            else errorInput(ref gInput, ref g);
+            if (g.value > 0) okInput( gInput,  g);
+            else errorInput( gInput,  g);
 
-            Log();
+            Draw();
         }
 
         private void MercuryG_Click(object sender, EventArgs e)
@@ -314,7 +481,6 @@ namespace Physics
         {
             gInput.Text = "0,81";
         }
-
-       
+    
     }
 }
