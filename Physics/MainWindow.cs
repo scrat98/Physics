@@ -307,6 +307,10 @@ namespace Physics
 
             VyPlot.Model = Vy.GetModel();
             VyPlot.Model.InvalidatePlot(true);
+
+           
+
+
         }
 
         private void errorInput(TextBox input, Argument arg)
