@@ -23,7 +23,7 @@ namespace Physics
             public double value;
         };
 
-        private static readonly double delay = 0.1;
+        private static readonly double delay = 0.01;
 
         class Data
         {
@@ -227,10 +227,12 @@ namespace Physics
         {
             Log();
 
-            // check if OK and draw
+            // check for OK
             // TODO
 
             double curT = 0;
+            double Fx = 0;
+            double Fy = 0;
 
             Ax.Init(0);
             Ay.Init(0);
@@ -254,8 +256,8 @@ namespace Physics
                     Ay.TheoryUpdate(-g.value, curT);
                     A.TheoryUpdate(Math.Sqrt(Math.Pow(Ax.getTheory(),2) + Math.Pow(Ay.getTheory(), 2)), curT);
 
-                    Vx.TheoryUpdate(Vx.getTheory() - Ax.getTheory() * delay, curT);
-                    Vy.TheoryUpdate(Vy.getTheory() - Ay.getTheory() * delay, curT);
+                    Vx.TheoryUpdate(Vx.getTheory() + Ax.getTheory() * delay, curT);
+                    Vy.TheoryUpdate(Vy.getTheory() + Ay.getTheory() * delay, curT);
                     V.TheoryUpdate(Math.Sqrt(Math.Pow(Vx.getTheory(), 2) + Math.Pow(Vy.getTheory(), 2)), curT);
 
                     H.TheoryUpdate(H.getTheory() + Vy.getTheory() * delay + Ay.getTheory() * curT * curT / 2, curT);
@@ -263,15 +265,48 @@ namespace Physics
                 }
 
                 // real update
-                // TODO
+                if (H.getReal() > 0)
+                {
+                    // Fx calculate 
+                    if (Vx.getReal() < v1.value) Fx = -Math.Sign(Vx.getReal()) * k1.value;
+                    if (Vx.getReal() >= v1.value && Vx.getReal() < v2.value) Fx = -k2.value * Vx.getReal();
+                    if (Vx.getReal() >= v2.value) Fx = -k3.value * Math.Abs(Vx.getReal()) * Vx.getReal();
 
-                // exit if we are fall
-                //if (H.getReal() == 0 && H.getTheory() == 0) break;
-                if (H.getTheory() <= 0) break;
+                    // Fy calculate 
+                    if (Vy.getReal() < v1.value) Fy = -Math.Sign(Vy.getReal()) * k1.value;
+                    if (Vy.getReal() >= v1.value && Vy.getReal() < v2.value) Fy = -k2.value * Vy.getReal();
+                    if (Vy.getReal() >= v2.value) Fy = -k3.value * Math.Abs(Vy.getReal()) * Vy.getReal();
+
+                    Ax.RealUpdate(Fx / mass.value, curT);
+                    Ay.RealUpdate(-g.value + Fy / mass.value, curT);
+                    A.RealUpdate(Math.Sqrt(Math.Pow(Ax.getReal(), 2) + Math.Pow(Ay.getReal(), 2)), curT);
+
+                    Vx.RealUpdate(Vx.getReal() + Ax.getReal() * delay, curT);
+                    Vy.RealUpdate(Vy.getReal() + Ay.getReal() * delay, curT);
+                    V.RealUpdate(Math.Sqrt(Math.Pow(Vx.getReal(), 2) + Math.Pow(Vy.getReal(), 2)), curT);
+
+                    H.RealUpdate(H.getReal() + Vy.getReal() * delay + Ay.getReal() * curT * curT / 2, curT);
+                    S.RealUpdate(S.getReal() + Vx.getReal() * delay + Ax.getReal() * curT * curT / 2, curT);
+                }
+
+                // exit if we are falled
+                if (H.getReal() <= 0 && H.getTheory() <= 0) break;
             }
 
             HeightPlot.Model = H.GetModel();
             HeightPlot.Model.InvalidatePlot(true);
+
+            SPlot.Model = S.GetModel();
+            SPlot.Model.InvalidatePlot(true);
+
+            VPlot.Model = V.GetModel();
+            VPlot.Model.InvalidatePlot(true);
+
+            VxPlot.Model = Vx.GetModel();
+            VxPlot.Model.InvalidatePlot(true);
+
+            VyPlot.Model = Vy.GetModel();
+            VyPlot.Model.InvalidatePlot(true);
         }
 
         private void errorInput(TextBox input, Argument arg)

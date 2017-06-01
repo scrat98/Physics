@@ -75,6 +75,17 @@
             this.PlotTabs = new System.Windows.Forms.TabControl();
             this.HeightPage = new System.Windows.Forms.TabPage();
             this.HeightPlot = new OxyPlot.WindowsForms.PlotView();
+            this.STab = new System.Windows.Forms.TabPage();
+            this.SPlot = new OxyPlot.WindowsForms.PlotView();
+            this.VTab = new System.Windows.Forms.TabPage();
+            this.VPlot = new OxyPlot.WindowsForms.PlotView();
+            this.VxTab = new System.Windows.Forms.TabPage();
+            this.VxPlot = new OxyPlot.WindowsForms.PlotView();
+            this.VyTab = new System.Windows.Forms.TabPage();
+            this.VyPlot = new OxyPlot.WindowsForms.PlotView();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.InputContainer.SuspendLayout();
             this.PlanetContainer3.SuspendLayout();
             this.PlanetContainer2.SuspendLayout();
@@ -92,6 +103,10 @@
             this.WindowContainer.SuspendLayout();
             this.PlotTabs.SuspendLayout();
             this.HeightPage.SuspendLayout();
+            this.STab.SuspendLayout();
+            this.VTab.SuspendLayout();
+            this.VxTab.SuspendLayout();
+            this.VyTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // InputContainer
@@ -699,6 +714,13 @@
             // PlotTabs
             // 
             this.PlotTabs.Controls.Add(this.HeightPage);
+            this.PlotTabs.Controls.Add(this.STab);
+            this.PlotTabs.Controls.Add(this.VTab);
+            this.PlotTabs.Controls.Add(this.VxTab);
+            this.PlotTabs.Controls.Add(this.VyTab);
+            this.PlotTabs.Controls.Add(this.tabPage4);
+            this.PlotTabs.Controls.Add(this.tabPage5);
+            this.PlotTabs.Controls.Add(this.tabPage6);
             this.PlotTabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PlotTabs.Location = new System.Drawing.Point(3, 253);
             this.PlotTabs.Name = "PlotTabs";
@@ -728,6 +750,128 @@
             this.HeightPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.HeightPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.HeightPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // STab
+            // 
+            this.STab.Controls.Add(this.SPlot);
+            this.STab.Location = new System.Drawing.Point(4, 25);
+            this.STab.Name = "STab";
+            this.STab.Padding = new System.Windows.Forms.Padding(3);
+            this.STab.Size = new System.Drawing.Size(991, 468);
+            this.STab.TabIndex = 3;
+            this.STab.Text = "S(t)";
+            this.STab.UseVisualStyleBackColor = true;
+            // 
+            // SPlot
+            // 
+            this.SPlot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SPlot.Location = new System.Drawing.Point(3, 3);
+            this.SPlot.Name = "SPlot";
+            this.SPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.SPlot.Size = new System.Drawing.Size(985, 462);
+            this.SPlot.TabIndex = 0;
+            this.SPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.SPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.SPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // VTab
+            // 
+            this.VTab.Controls.Add(this.VPlot);
+            this.VTab.Location = new System.Drawing.Point(4, 25);
+            this.VTab.Name = "VTab";
+            this.VTab.Padding = new System.Windows.Forms.Padding(3);
+            this.VTab.Size = new System.Drawing.Size(991, 468);
+            this.VTab.TabIndex = 4;
+            this.VTab.Text = "V(t)";
+            this.VTab.UseVisualStyleBackColor = true;
+            // 
+            // VPlot
+            // 
+            this.VPlot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VPlot.Location = new System.Drawing.Point(3, 3);
+            this.VPlot.Name = "VPlot";
+            this.VPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.VPlot.Size = new System.Drawing.Size(985, 462);
+            this.VPlot.TabIndex = 0;
+            this.VPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.VPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.VPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // VxTab
+            // 
+            this.VxTab.Controls.Add(this.VxPlot);
+            this.VxTab.Location = new System.Drawing.Point(4, 25);
+            this.VxTab.Name = "VxTab";
+            this.VxTab.Padding = new System.Windows.Forms.Padding(3);
+            this.VxTab.Size = new System.Drawing.Size(991, 468);
+            this.VxTab.TabIndex = 5;
+            this.VxTab.Text = "Vx(t)";
+            this.VxTab.UseVisualStyleBackColor = true;
+            // 
+            // VxPlot
+            // 
+            this.VxPlot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VxPlot.Location = new System.Drawing.Point(3, 3);
+            this.VxPlot.Name = "VxPlot";
+            this.VxPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.VxPlot.Size = new System.Drawing.Size(985, 462);
+            this.VxPlot.TabIndex = 0;
+            this.VxPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.VxPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.VxPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // VyTab
+            // 
+            this.VyTab.Controls.Add(this.VyPlot);
+            this.VyTab.Location = new System.Drawing.Point(4, 25);
+            this.VyTab.Name = "VyTab";
+            this.VyTab.Padding = new System.Windows.Forms.Padding(3);
+            this.VyTab.Size = new System.Drawing.Size(991, 468);
+            this.VyTab.TabIndex = 6;
+            this.VyTab.Text = "Vy(t)";
+            this.VyTab.UseVisualStyleBackColor = true;
+            // 
+            // VyPlot
+            // 
+            this.VyPlot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.VyPlot.Location = new System.Drawing.Point(3, 3);
+            this.VyPlot.Name = "VyPlot";
+            this.VyPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.VyPlot.Size = new System.Drawing.Size(985, 462);
+            this.VyPlot.TabIndex = 0;
+            this.VyPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.VyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.VyPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(991, 468);
+            this.tabPage4.TabIndex = 7;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(991, 468);
+            this.tabPage5.TabIndex = 8;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(991, 468);
+            this.tabPage6.TabIndex = 9;
+            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // MainWindow
             // 
@@ -765,6 +909,10 @@
             this.WindowContainer.ResumeLayout(false);
             this.PlotTabs.ResumeLayout(false);
             this.HeightPage.ResumeLayout(false);
+            this.STab.ResumeLayout(false);
+            this.VTab.ResumeLayout(false);
+            this.VxTab.ResumeLayout(false);
+            this.VyTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -818,6 +966,17 @@
         private System.Windows.Forms.TabControl PlotTabs;
         private System.Windows.Forms.TabPage HeightPage;
         private OxyPlot.WindowsForms.PlotView HeightPlot;
+        private System.Windows.Forms.TabPage STab;
+        private OxyPlot.WindowsForms.PlotView SPlot;
+        private System.Windows.Forms.TabPage VTab;
+        private OxyPlot.WindowsForms.PlotView VPlot;
+        private System.Windows.Forms.TabPage VxTab;
+        private System.Windows.Forms.TabPage VyTab;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage6;
+        private OxyPlot.WindowsForms.PlotView VxPlot;
+        private OxyPlot.WindowsForms.PlotView VyPlot;
     }
 }
 
