@@ -85,10 +85,11 @@ namespace Physics
                 Log();
                 return;
             }
-            if (arguments.v2.value >= arguments.v1.value && arguments.v1.ok == true)
+            if (arguments.v2.value >= arguments.v1.value)
             {
                 okInput(VelK2Input, arguments.v2);
-                okInput(VelK1Input, arguments.v1);
+                if(Double.TryParse(VelK1Input.Text, out arguments.v1.value))
+                    okInput(VelK1Input, arguments.v1);
             }
             else
             {
@@ -117,7 +118,8 @@ namespace Physics
 
             if (arguments.v2.value >= arguments.v1.value && arguments.v2.ok == true)
             {
-                okInput(VelK2Input, arguments.v2);
+                if(Double.TryParse(VelK2Input.Text, out arguments.v2.value))
+                    okInput(VelK2Input, arguments.v2);
                 okInput(VelK1Input, arguments.v1);
             }
             else
