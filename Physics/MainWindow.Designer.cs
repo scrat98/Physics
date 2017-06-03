@@ -205,6 +205,7 @@
             this.AngInput.ShortcutsEnabled = true;
             this.AngInput.Size = new System.Drawing.Size(130, 36);
             this.AngInput.TabIndex = 1;
+            this.AngInput.UseCustomBackColor = true;
             this.AngInput.UseSelectable = true;
             this.AngInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.AngInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -383,6 +384,7 @@
             this.K3Input.ShortcutsEnabled = true;
             this.K3Input.Size = new System.Drawing.Size(130, 35);
             this.K3Input.TabIndex = 1;
+            this.K3Input.UseCustomBackColor = true;
             this.K3Input.UseSelectable = true;
             this.K3Input.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.K3Input.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -445,6 +447,7 @@
             this.K2Input.ShortcutsEnabled = true;
             this.K2Input.Size = new System.Drawing.Size(127, 35);
             this.K2Input.TabIndex = 1;
+            this.K2Input.UseCustomBackColor = true;
             this.K2Input.UseSelectable = true;
             this.K2Input.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.K2Input.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -508,6 +511,7 @@
             this.K1Input.ShortcutsEnabled = true;
             this.K1Input.Size = new System.Drawing.Size(127, 35);
             this.K1Input.TabIndex = 1;
+            this.K1Input.UseCustomBackColor = true;
             this.K1Input.UseSelectable = true;
             this.K1Input.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.K1Input.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -571,6 +575,7 @@
             this.gInput.ShortcutsEnabled = true;
             this.gInput.Size = new System.Drawing.Size(127, 35);
             this.gInput.TabIndex = 0;
+            this.gInput.UseCustomBackColor = true;
             this.gInput.UseSelectable = true;
             this.gInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.gInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -620,6 +625,7 @@
             // 
             // MassInput
             // 
+            this.MassInput.BackColor = System.Drawing.Color.White;
             // 
             // 
             // 
@@ -634,6 +640,7 @@
             this.MassInput.CustomButton.Visible = false;
             this.MassInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MassInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.MassInput.ForeColor = System.Drawing.Color.Black;
             this.MassInput.Lines = new string[0];
             this.MassInput.Location = new System.Drawing.Point(103, 2);
             this.MassInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -647,6 +654,7 @@
             this.MassInput.ShortcutsEnabled = true;
             this.MassInput.Size = new System.Drawing.Size(127, 36);
             this.MassInput.TabIndex = 0;
+            this.MassInput.UseCustomBackColor = true;
             this.MassInput.UseSelectable = true;
             this.MassInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.MassInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -702,6 +710,7 @@
             this.VelK2Input.ShortcutsEnabled = true;
             this.VelK2Input.Size = new System.Drawing.Size(248, 35);
             this.VelK2Input.TabIndex = 4;
+            this.VelK2Input.UseCustomBackColor = true;
             this.VelK2Input.UseSelectable = true;
             this.VelK2Input.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.VelK2Input.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -762,6 +771,7 @@
             this.VelK1Input.ShortcutsEnabled = true;
             this.VelK1Input.Size = new System.Drawing.Size(248, 35);
             this.VelK1Input.TabIndex = 3;
+            this.VelK1Input.UseCustomBackColor = true;
             this.VelK1Input.UseSelectable = true;
             this.VelK1Input.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.VelK1Input.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -882,6 +892,7 @@
             this.VelInput.ShortcutsEnabled = true;
             this.VelInput.Size = new System.Drawing.Size(127, 36);
             this.VelInput.TabIndex = 1;
+            this.VelInput.UseCustomBackColor = true;
             this.VelInput.UseSelectable = true;
             this.VelInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.VelInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -944,6 +955,7 @@
             this.HeightInput.ShortcutsEnabled = true;
             this.HeightInput.Size = new System.Drawing.Size(127, 36);
             this.HeightInput.TabIndex = 1;
+            this.HeightInput.UseCustomBackColor = true;
             this.HeightInput.UseSelectable = true;
             this.HeightInput.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.HeightInput.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -996,7 +1008,7 @@
             this.HeightPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HeightPage.Name = "HeightPage";
             this.HeightPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.HeightPage.Size = new System.Drawing.Size(951, 321);
+            this.HeightPage.Size = new System.Drawing.Size(951, 351);
             this.HeightPage.TabIndex = 2;
             this.HeightPage.Text = "H(t)";
             this.HeightPage.UseVisualStyleBackColor = true;
@@ -1011,7 +1023,7 @@
             this.HeightPlot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HeightPlot.Name = "HeightPlot";
             this.HeightPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.HeightPlot.Size = new System.Drawing.Size(945, 317);
+            this.HeightPlot.Size = new System.Drawing.Size(945, 347);
             this.HeightPlot.TabIndex = 0;
             this.HeightPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.HeightPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1027,7 +1039,7 @@
             this.STab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.STab.Name = "STab";
             this.STab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.STab.Size = new System.Drawing.Size(951, 321);
+            this.STab.Size = new System.Drawing.Size(951, 351);
             this.STab.TabIndex = 3;
             this.STab.Text = "S(t)";
             this.STab.UseVisualStyleBackColor = true;
@@ -1042,7 +1054,7 @@
             this.SPlot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SPlot.Name = "SPlot";
             this.SPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.SPlot.Size = new System.Drawing.Size(945, 317);
+            this.SPlot.Size = new System.Drawing.Size(945, 347);
             this.SPlot.TabIndex = 0;
             this.SPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.SPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1089,7 +1101,7 @@
             this.VxTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VxTab.Name = "VxTab";
             this.VxTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VxTab.Size = new System.Drawing.Size(951, 321);
+            this.VxTab.Size = new System.Drawing.Size(951, 351);
             this.VxTab.TabIndex = 5;
             this.VxTab.Text = "Vx(t)";
             this.VxTab.UseVisualStyleBackColor = true;
@@ -1104,7 +1116,7 @@
             this.VxPlot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VxPlot.Name = "VxPlot";
             this.VxPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VxPlot.Size = new System.Drawing.Size(945, 317);
+            this.VxPlot.Size = new System.Drawing.Size(945, 347);
             this.VxPlot.TabIndex = 0;
             this.VxPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VxPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1120,7 +1132,7 @@
             this.VyTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VyTab.Name = "VyTab";
             this.VyTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VyTab.Size = new System.Drawing.Size(951, 321);
+            this.VyTab.Size = new System.Drawing.Size(951, 351);
             this.VyTab.TabIndex = 6;
             this.VyTab.Text = "Vy(t)";
             this.VyTab.UseVisualStyleBackColor = true;
@@ -1135,7 +1147,7 @@
             this.VyPlot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VyPlot.Name = "VyPlot";
             this.VyPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VyPlot.Size = new System.Drawing.Size(945, 317);
+            this.VyPlot.Size = new System.Drawing.Size(945, 347);
             this.VyPlot.TabIndex = 0;
             this.VyPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1151,7 +1163,7 @@
             this.ATab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ATab.Name = "ATab";
             this.ATab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ATab.Size = new System.Drawing.Size(951, 321);
+            this.ATab.Size = new System.Drawing.Size(951, 351);
             this.ATab.TabIndex = 7;
             this.ATab.Text = "A(t)";
             this.ATab.UseVisualStyleBackColor = true;
@@ -1166,7 +1178,7 @@
             this.APlot.Margin = new System.Windows.Forms.Padding(4);
             this.APlot.Name = "APlot";
             this.APlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.APlot.Size = new System.Drawing.Size(945, 317);
+            this.APlot.Size = new System.Drawing.Size(945, 347);
             this.APlot.TabIndex = 0;
             this.APlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.APlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1182,7 +1194,7 @@
             this.AxTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AxTab.Name = "AxTab";
             this.AxTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AxTab.Size = new System.Drawing.Size(951, 321);
+            this.AxTab.Size = new System.Drawing.Size(951, 351);
             this.AxTab.TabIndex = 8;
             this.AxTab.Text = "Ax(t)";
             this.AxTab.UseVisualStyleBackColor = true;
@@ -1197,7 +1209,7 @@
             this.AxPlot.Margin = new System.Windows.Forms.Padding(4);
             this.AxPlot.Name = "AxPlot";
             this.AxPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.AxPlot.Size = new System.Drawing.Size(945, 317);
+            this.AxPlot.Size = new System.Drawing.Size(945, 347);
             this.AxPlot.TabIndex = 0;
             this.AxPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.AxPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1213,7 +1225,7 @@
             this.AyTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AyTab.Name = "AyTab";
             this.AyTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AyTab.Size = new System.Drawing.Size(951, 321);
+            this.AyTab.Size = new System.Drawing.Size(951, 351);
             this.AyTab.TabIndex = 9;
             this.AyTab.Text = "Ay(t)";
             this.AyTab.UseVisualStyleBackColor = true;
@@ -1228,7 +1240,7 @@
             this.AyPlot.Margin = new System.Windows.Forms.Padding(4);
             this.AyPlot.Name = "AyPlot";
             this.AyPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.AyPlot.Size = new System.Drawing.Size(945, 317);
+            this.AyPlot.Size = new System.Drawing.Size(945, 347);
             this.AyPlot.TabIndex = 0;
             this.AyPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.AyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1246,7 +1258,6 @@
             this.MinimumSize = new System.Drawing.Size(398, 397);
             this.Name = "MainWindow";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Physics";
             this.InputContainer.ResumeLayout(false);
             this.AngContainer.ResumeLayout(false);

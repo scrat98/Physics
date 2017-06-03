@@ -16,7 +16,7 @@ namespace Physics
             input.BackColor = Color.Red;
             arg.ok = false;
         }
-
+        
         private void okInput(MetroTextBox input, Argument arg)
         {
             input.BackColor = Color.White;
@@ -116,7 +116,7 @@ namespace Physics
                 return;
             }
 
-            if (arguments.v2.value >= arguments.v1.value && arguments.v2.ok == true)
+            if (arguments.v2.value >= arguments.v1.value)
             {
                 if(Double.TryParse(VelK2Input.Text, out arguments.v2.value))
                     okInput(VelK2Input, arguments.v2);

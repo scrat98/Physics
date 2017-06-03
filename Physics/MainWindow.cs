@@ -108,7 +108,7 @@ namespace Physics
         Data Ax, Ay, A;
 
         Arguments arguments;
-
+        
         public MainWindow()
         {
             InitializeComponent();
