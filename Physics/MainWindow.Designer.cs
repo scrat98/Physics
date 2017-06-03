@@ -956,13 +956,13 @@
             this.WindowContainer.Controls.Add(this.InputContainer, 0, 0);
             this.WindowContainer.Controls.Add(this.PlotTabs, 0, 1);
             this.WindowContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WindowContainer.Location = new System.Drawing.Point(20, 60);
+            this.WindowContainer.Location = new System.Drawing.Point(20, 30);
             this.WindowContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.WindowContainer.Name = "WindowContainer";
             this.WindowContainer.RowCount = 2;
             this.WindowContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300F));
             this.WindowContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.WindowContainer.Size = new System.Drawing.Size(965, 673);
+            this.WindowContainer.Size = new System.Drawing.Size(965, 703);
             this.WindowContainer.TabIndex = 1;
             // 
             // PlotTabs
@@ -981,7 +981,7 @@
             this.PlotTabs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PlotTabs.Name = "PlotTabs";
             this.PlotTabs.SelectedIndex = 2;
-            this.PlotTabs.Size = new System.Drawing.Size(959, 369);
+            this.PlotTabs.Size = new System.Drawing.Size(959, 399);
             this.PlotTabs.TabIndex = 1;
             this.PlotTabs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.PlotTabs.UseSelectable = true;
@@ -1058,7 +1058,7 @@
             this.VTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VTab.Name = "VTab";
             this.VTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VTab.Size = new System.Drawing.Size(951, 321);
+            this.VTab.Size = new System.Drawing.Size(951, 351);
             this.VTab.TabIndex = 4;
             this.VTab.Text = "V(t)";
             this.VTab.UseVisualStyleBackColor = true;
@@ -1073,7 +1073,7 @@
             this.VPlot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.VPlot.Name = "VPlot";
             this.VPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VPlot.Size = new System.Drawing.Size(945, 317);
+            this.VPlot.Size = new System.Drawing.Size(945, 347);
             this.VPlot.TabIndex = 0;
             this.VPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1238,11 +1238,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(1005, 753);
             this.Controls.Add(this.WindowContainer);
+            this.DisplayHeader = false;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MinimumSize = new System.Drawing.Size(398, 397);
             this.Name = "MainWindow";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Physics";
             this.InputContainer.ResumeLayout(false);
             this.AngContainer.ResumeLayout(false);

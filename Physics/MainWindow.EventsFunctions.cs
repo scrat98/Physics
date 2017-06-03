@@ -68,12 +68,12 @@ namespace Physics
         {
             if (!Double.TryParse(AngInput.Text, out arguments.angle.value))
             {
-                errorInput(AngInput, arguments.v0);
+                errorInput(AngInput, arguments.angle);
                 Log();
                 return;
             }
             if (arguments.angle.value >= 0 && arguments.angle.value <= 90) okInput(AngInput, arguments.angle);
-            else errorInput(AngInput, arguments.v0);
+            else errorInput(AngInput, arguments.angle);
             Draw();
         }
 
@@ -85,7 +85,7 @@ namespace Physics
                 Log();
                 return;
             }
-            if (arguments.v2.value >= arguments.v1.value)
+            if (arguments.v2.value >= arguments.v1.value && arguments.v1.ok == true)
             {
                 okInput(VelK2Input, arguments.v2);
                 okInput(VelK1Input, arguments.v1);
@@ -115,7 +115,7 @@ namespace Physics
                 return;
             }
 
-            if (arguments.v2.value >= arguments.v1.value)
+            if (arguments.v2.value >= arguments.v1.value && arguments.v2.ok == true)
             {
                 okInput(VelK2Input, arguments.v2);
                 okInput(VelK1Input, arguments.v1);
