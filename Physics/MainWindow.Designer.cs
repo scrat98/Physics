@@ -64,6 +64,8 @@
             this.JupiterG = new MetroFramework.Controls.MetroButton();
             this.WindowContainer = new System.Windows.Forms.TableLayoutPanel();
             this.PlotTabs = new MetroFramework.Controls.MetroTabControl();
+            this.GlobalTab = new MetroFramework.Controls.MetroTabPage();
+            this.GlobalPlot = new OxyPlot.WindowsForms.PlotView();
             this.HeightPage = new MetroFramework.Controls.MetroTabPage();
             this.HeightPlot = new OxyPlot.WindowsForms.PlotView();
             this.STab = new MetroFramework.Controls.MetroTabPage();
@@ -80,8 +82,6 @@
             this.AxPlot = new OxyPlot.WindowsForms.PlotView();
             this.AyTab = new MetroFramework.Controls.MetroTabPage();
             this.AyPlot = new OxyPlot.WindowsForms.PlotView();
-            this.GlobalTab = new MetroFramework.Controls.MetroTabPage();
-            this.GlobalPlot = new OxyPlot.WindowsForms.PlotView();
             this.InputContainer.SuspendLayout();
             this.AngContainer.SuspendLayout();
             this.MassContainer.SuspendLayout();
@@ -95,6 +95,7 @@
             this.PlanetContainer3.SuspendLayout();
             this.WindowContainer.SuspendLayout();
             this.PlotTabs.SuspendLayout();
+            this.GlobalTab.SuspendLayout();
             this.HeightPage.SuspendLayout();
             this.STab.SuspendLayout();
             this.VTab.SuspendLayout();
@@ -103,7 +104,6 @@
             this.ATab.SuspendLayout();
             this.AxTab.SuspendLayout();
             this.AyTab.SuspendLayout();
-            this.GlobalTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // InputContainer
@@ -792,6 +792,34 @@
             this.PlotTabs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.PlotTabs.UseSelectable = true;
             // 
+            // GlobalTab
+            // 
+            this.GlobalTab.Controls.Add(this.GlobalPlot);
+            this.GlobalTab.HorizontalScrollbarBarColor = true;
+            this.GlobalTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.GlobalTab.HorizontalScrollbarSize = 10;
+            this.GlobalTab.Location = new System.Drawing.Point(4, 44);
+            this.GlobalTab.Name = "GlobalTab";
+            this.GlobalTab.Size = new System.Drawing.Size(951, 491);
+            this.GlobalTab.TabIndex = 10;
+            this.GlobalTab.Text = "H(S)";
+            this.GlobalTab.VerticalScrollbarBarColor = true;
+            this.GlobalTab.VerticalScrollbarHighlightOnWheel = false;
+            this.GlobalTab.VerticalScrollbarSize = 10;
+            // 
+            // GlobalPlot
+            // 
+            this.GlobalPlot.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GlobalPlot.Location = new System.Drawing.Point(0, 0);
+            this.GlobalPlot.Name = "GlobalPlot";
+            this.GlobalPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.GlobalPlot.Size = new System.Drawing.Size(951, 491);
+            this.GlobalPlot.TabIndex = 2;
+            this.GlobalPlot.Text = "plotView1";
+            this.GlobalPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.GlobalPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.GlobalPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
             // HeightPage
             // 
             this.HeightPage.Controls.Add(this.HeightPlot);
@@ -1040,34 +1068,6 @@
             this.AyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.AyPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
-            // GlobalTab
-            // 
-            this.GlobalTab.Controls.Add(this.GlobalPlot);
-            this.GlobalTab.HorizontalScrollbarBarColor = true;
-            this.GlobalTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.GlobalTab.HorizontalScrollbarSize = 10;
-            this.GlobalTab.Location = new System.Drawing.Point(4, 44);
-            this.GlobalTab.Name = "GlobalTab";
-            this.GlobalTab.Size = new System.Drawing.Size(951, 491);
-            this.GlobalTab.TabIndex = 10;
-            this.GlobalTab.Text = "H(S)";
-            this.GlobalTab.VerticalScrollbarBarColor = true;
-            this.GlobalTab.VerticalScrollbarHighlightOnWheel = false;
-            this.GlobalTab.VerticalScrollbarSize = 10;
-            // 
-            // GlobalPlot
-            // 
-            this.GlobalPlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GlobalPlot.Location = new System.Drawing.Point(0, 0);
-            this.GlobalPlot.Name = "GlobalPlot";
-            this.GlobalPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.GlobalPlot.Size = new System.Drawing.Size(951, 491);
-            this.GlobalPlot.TabIndex = 2;
-            this.GlobalPlot.Text = "plotView1";
-            this.GlobalPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
-            this.GlobalPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
-            this.GlobalPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1101,6 +1101,7 @@
             this.PlanetContainer3.ResumeLayout(false);
             this.WindowContainer.ResumeLayout(false);
             this.PlotTabs.ResumeLayout(false);
+            this.GlobalTab.ResumeLayout(false);
             this.HeightPage.ResumeLayout(false);
             this.STab.ResumeLayout(false);
             this.VTab.ResumeLayout(false);
@@ -1109,7 +1110,6 @@
             this.ATab.ResumeLayout(false);
             this.AxTab.ResumeLayout(false);
             this.AyTab.ResumeLayout(false);
-            this.GlobalTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

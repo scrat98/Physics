@@ -29,15 +29,15 @@ namespace Physics
         {
             window = _window;
 
-            Vx = new ChartData("Vx(t)");
-            Vy = new ChartData("Vy(t)");
-            V = new ChartData("V(t)");
-            H = new ChartData("H(t)");
-            S = new ChartData("S(t)");
-            Ax = new ChartData("Ax(t)");
-            Ay = new ChartData("Ay(t)");
-            A = new ChartData("A(t)");
-            Global = new ChartData("H(S)");
+            Vx = new ChartData("Vx(t)", "t, sec", "Velocity, m/s");
+            Vy = new ChartData("Vy(t)", "t, sec", "Velocity, m/s");
+            V = new ChartData("V(t)", "t, sec", "Velocity, m/s");
+            H = new ChartData("H(t)", "t, sec", "Height, m");
+            S = new ChartData("S(t)", "t, sec", "Distance, m");
+            Ax = new ChartData("Ax(t)", "t, sec", "Accelerate, m/s\xB2");
+            Ay = new ChartData("Ay(t)", "t, sec", "Accelerate, m/s\xB2");
+            A = new ChartData("A(t)", "t, sec", "Accelerate, m/s\xB2");
+            Global = new ChartData("H(S)", "Distance, m", "Height, m");
         }
 
         private void VelocityInit()

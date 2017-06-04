@@ -18,7 +18,7 @@ namespace Physics
         private LineSeries theoryData, realData;
         private PlotModel model;
 
-        public ChartData(string title)
+        public ChartData(string title, string x_name, string y_name)
         {
             theory = 0;
             theoryData = new LineSeries();
@@ -31,6 +31,9 @@ namespace Physics
             realData.Title = "with air";
 
             model = new PlotModel();
+            model.LegendPlacement = LegendPlacement.Outside;
+            model.LegendPosition = LegendPosition.TopCenter;
+            model.LegendOrientation = LegendOrientation.Horizontal;
 
             model.Title = title;
             model.Axes.Add(new LinearAxis
@@ -38,12 +41,14 @@ namespace Physics
                 MajorGridlineStyle = LineStyle.Solid,
                 MinorGridlineStyle = LineStyle.Dot,
                 Position = AxisPosition.Bottom,
+                Title = x_name
             });
             model.Axes.Add(new LinearAxis
             {
                 MajorGridlineStyle = LineStyle.Solid,
                 MinorGridlineStyle = LineStyle.Dot,
                 Position = AxisPosition.Left,
+                Title = y_name
             });
         }
 
