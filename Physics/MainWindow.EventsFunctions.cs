@@ -35,7 +35,7 @@ namespace Physics
             if (arguments.mass.value > 0) okInput(MassInput, arguments.mass);
             else errorInput(MassInput, arguments.mass);
 
-            Draw();
+            charts.Draw();
         }
 
         private void HeightInput_TextChanged(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace Physics
             }
             if (arguments.defaultH.value >= 0) okInput(HeightInput, arguments.defaultH);
             else errorInput(HeightInput, arguments.defaultH);
-            Draw();
+            charts.Draw();
         }
 
         private void VelInput_TextChanged(object sender, EventArgs e)
@@ -61,7 +61,7 @@ namespace Physics
             }
             if (arguments.v0.value > 0) okInput(VelInput, arguments.v0);
             else errorInput(VelInput, arguments.v0);
-            Draw();
+            charts.Draw();
         }
 
         private void AngInput_TextChanged(object sender, EventArgs e)
@@ -74,7 +74,7 @@ namespace Physics
             }
             if (arguments.angle.value >= 0 && arguments.angle.value <= 90) okInput(AngInput, arguments.angle);
             else errorInput(AngInput, arguments.angle);
-            Draw();
+            charts.Draw();
         }
 
         private void VelK2Input_TextChanged(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace Physics
                 errorInput(VelK2Input, arguments.v2);
             }
 
-            Draw();
+            charts.Draw();
         }
 
         private void VelK1Input_TextChanged(object sender, EventArgs e)
@@ -128,7 +128,7 @@ namespace Physics
                 errorInput(VelK2Input, arguments.v2);
             }
 
-            Draw();
+            charts.Draw();
         }
 
         private void K1Input_TextChanged(object sender, EventArgs e)
@@ -142,7 +142,7 @@ namespace Physics
             if (arguments.k1.value >= 0) okInput(K1Input, arguments.k1);
             else errorInput(K1Input, arguments.k1);
 
-            Draw();
+            charts.Draw();
         }
 
         private void K2Input_TextChanged(object sender, EventArgs e)
@@ -156,7 +156,7 @@ namespace Physics
             if (arguments.k2.value > 0) okInput(K2Input, arguments.k2);
             else errorInput(K2Input, arguments.k2);
 
-            Draw();
+            charts.Draw();
         }
 
         private void K3Input_TextChanged(object sender, EventArgs e)
@@ -170,7 +170,7 @@ namespace Physics
             if (arguments.k3.value > 0) okInput(K3Input, arguments.k3);
             else errorInput(K3Input, arguments.k3);
 
-            Draw();
+            charts.Draw();
         }
 
         private void gInput_TextChanged(object sender, EventArgs e)
@@ -184,7 +184,7 @@ namespace Physics
             if (arguments.g.value > 0) okInput(gInput, arguments.g);
             else errorInput(gInput, arguments.g);
 
-            Draw();
+            charts.Draw();
         }
 
         private void MercuryG_Click(object sender, EventArgs e)

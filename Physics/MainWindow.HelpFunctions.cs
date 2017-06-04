@@ -8,7 +8,7 @@ namespace Physics
 {
     public partial class MainWindow
     {
-        private double DegreeToRadian(double angle)
+        public double DegreeToRadian(double angle)
         {
             return Math.PI * angle / 180.0;
         }
@@ -27,8 +27,35 @@ namespace Physics
             K2Input.Text = "0,34";
             K3Input.Text = "0,47";
         }
+        
+        public void PlotsUpdate()
+        {
+            HeightPlot.Model = charts.H.GetModel();
+            HeightPlot.Model.InvalidatePlot(true);
 
-        private void Log()
+            SPlot.Model = charts.S.GetModel();
+            SPlot.Model.InvalidatePlot(true);
+
+            VPlot.Model = charts.V.GetModel();
+            VPlot.Model.InvalidatePlot(true);
+
+            VxPlot.Model = charts.Vx.GetModel();
+            VxPlot.Model.InvalidatePlot(true);
+
+            VyPlot.Model = charts.Vy.GetModel();
+            VyPlot.Model.InvalidatePlot(true);
+
+            APlot.Model = charts.A.GetModel();
+            APlot.Model.InvalidatePlot(true);
+
+            AxPlot.Model = charts.Ax.GetModel();
+            AxPlot.Model.InvalidatePlot(true);
+
+            AyPlot.Model = charts.Ay.GetModel();
+            AyPlot.Model.InvalidatePlot(true);
+        }
+
+        public void Log()
         {
             Console.Clear();
             if (arguments.mass.ok)
