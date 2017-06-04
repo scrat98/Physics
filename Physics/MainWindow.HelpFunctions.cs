@@ -15,19 +15,16 @@ namespace Physics
 
         private void InitArgs()
         {
-            MassInput.Text = "50";
+            MassInput.Text = "80";
             gInput.Text = "9,77";
             HeightInput.Text = "50";
             AngInput.Text = "50";
             VelInput.Text = "50";
             VelInput.Text = "50";
-            VelK1Input.Text = "5";
-            VelK2Input.Text = "15";
-            K1Input.Text = "0,05";
-            K2Input.Text = "0,34";
-            K3Input.Text = "0,47";
+            KInput.Text = "0,1";
+            PInput.Text = "1,247";
         }
-        
+
         public void PlotsUpdate()
         {
             HeightPlot.Model = charts.H.GetModel();
@@ -53,6 +50,9 @@ namespace Physics
 
             AyPlot.Model = charts.Ay.GetModel();
             AyPlot.Model.InvalidatePlot(true);
+
+            GlobalPlot.Model = charts.Global.GetModel();
+            GlobalPlot.Model.InvalidatePlot(true);
         }
 
         public void Log()
@@ -78,30 +78,15 @@ namespace Physics
             else
                 Console.WriteLine("v0: ERROR ");
 
-            if (arguments.v1.ok)
-                Console.WriteLine("v1: " + arguments.v1.value);
+            if (arguments.k.ok)
+                Console.WriteLine("k: " + arguments.k.value);
             else
-                Console.WriteLine("v1: ERROR");
+                Console.WriteLine("k: ERROR");
 
-            if (arguments.v2.ok)
-                Console.WriteLine("v2: " + arguments.v2.value);
+            if (arguments.p.ok)
+                Console.WriteLine("p: " + arguments.p.value);
             else
-                Console.WriteLine("v2: ERROR");
-
-            if (arguments.k1.ok)
-                Console.WriteLine("k1: " + arguments.k1.value);
-            else
-                Console.WriteLine("k1: ERROR");
-
-            if (arguments.k2.ok)
-                Console.WriteLine("k2: " + arguments.k2.value);
-            else
-                Console.WriteLine("k2: ERROR ");
-
-            if (arguments.k3.ok)
-                Console.WriteLine("k3: " + arguments.k3.value);
-            else
-                Console.WriteLine("k3: ERROR ");
+                Console.WriteLine("p: ERROR");
 
             if (arguments.g.ok)
                 Console.WriteLine("g: " + arguments.g.value);

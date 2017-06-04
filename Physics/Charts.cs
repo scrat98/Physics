@@ -23,6 +23,7 @@ namespace Physics
         public ChartData Ax { get; }
         public ChartData Ay { get; }
         public ChartData A { get; }
+        public ChartData Global { get; }
 
         public Charts(MainWindow _window)
         {
@@ -36,6 +37,7 @@ namespace Physics
             Ax = new ChartData("Ax(t)");
             Ay = new ChartData("Ay(t)");
             A = new ChartData("A(t)");
+            Global = new ChartData("H(S)");
         }
 
         private void VelocityInit()
@@ -67,6 +69,13 @@ namespace Physics
             S.RealUpdate(0, 0);
         }
 
+        private void GlobalInit()
+        {
+            Global.Init();
+            Global.TheoryUpdate(H.theory, S.theory);
+            Global.RealUpdate(H.real, S.real);
+        }
+
         private void AccelerationInit()
         {
             Ax.Init();
@@ -77,34 +86,21 @@ namespace Physics
             Ay.TheoryUpdate(-window.arguments.g.value, 0);
             A.TheoryUpdate(Math.Sqrt(Math.Pow(Ax.theory, 2) + Math.Pow(Ay.theory, 2)), 0);
 
-            double Fx = getFx();
-            double Fy = getFy();
-
-            Ax.RealUpdate(Fx / window.arguments.mass.value, 0);
-            Ay.RealUpdate(-window.arguments.g.value + Fy / window.arguments.mass.value, 0);
+            Ax.RealUpdate(getFx() / window.arguments.mass.value, 0);
+            Ay.RealUpdate(-window.arguments.g.value + getFy() / window.arguments.mass.value, 0);
             A.RealUpdate(Math.Sqrt(Math.Pow(Ax.real, 2) + Math.Pow(Ay.real, 2)), 0);
         }
 
         private double getFx()
         {
-            double Fx = 0;
             // Fx calculate 
-            if (Vx.real < window.arguments.v1.value) Fx = -Math.Sign(Vx.real) * window.arguments.k1.value;
-            if (Vx.real >= window.arguments.v1.value && Vx.real < window.arguments.v2.value) Fx = -window.arguments.k2.value * Vx.real;
-            if (Vx.real >= window.arguments.v2.value) Fx = -window.arguments.k3.value * Math.Abs(Vx.real) * Vx.real;
-
-            return Fx;
+            return -window.arguments.p.value * window.arguments.k.value * Vx.real * Math.Abs(Vx.real) / 2;
         }
 
         private double getFy()
         {
-            double Fy = 0;
             // Fy calculate 
-            if (Vy.real < window.arguments.v1.value) Fy = -Math.Sign(Vy.real) * window.arguments.k1.value;
-            if (Vy.real >= window.arguments.v1.value && Vy.real < window.arguments.v2.value) Fy = -window.arguments.k2.value * Vy.real;
-            if (Vy.real >= window.arguments.v2.value) Fy = -window.arguments.k3.value * Math.Abs(Vy.real) * Vy.real;
-
-            return Fy;
+            return -window.arguments.p.value * window.arguments.k.value * Vy.real * Math.Abs(Vy.real) / 2;
         }
 
         public void Draw()
@@ -114,6 +110,7 @@ namespace Physics
 
             HeightInit();
             SInit();
+            GlobalInit();
             VelocityInit();
             AccelerationInit();
 
@@ -128,12 +125,14 @@ namespace Physics
                 // theory update
                 if(H.theory > 0)
                 {
+                    // Dt calculate TODO
                     TheoryDt = window.delay;
 
                     TheoryT += TheoryDt;
 
                     H.TheoryUpdate(H.theory + Vy.theory * TheoryDt + Ay.theory * Math.Pow(TheoryDt, 2) / 2, TheoryT);
                     S.TheoryUpdate(S.theory + Vx.theory * TheoryDt + Ax.theory * Math.Pow(TheoryDt, 2) / 2, TheoryT);
+                    Global.TheoryUpdate(H.theory, S.theory);
 
                     Vx.TheoryUpdate(Vx.theory, TheoryT);
                     Vy.TheoryUpdate(Vy.theory + Ay.theory * TheoryDt, TheoryT);
@@ -147,12 +146,14 @@ namespace Physics
                 // real update
                 if (H.real > 0)
                 {
+                    // Dt calculate TODO
                     RealDt = window.delay;
 
                     RealT += RealDt;
 
                     H.RealUpdate(H.real + Vy.real * RealDt + Ay.real * Math.Pow(RealDt, 2) / 2, RealT);
                     S.RealUpdate(S.real + Vx.real * RealDt + Ax.real * Math.Pow(RealDt, 2) / 2, RealT);
+                    Global.RealUpdate(H.real, S.real);
 
                     Vx.RealUpdate(Vx.real + Ax.real * RealDt, RealT);
                     Vy.RealUpdate(Vy.real + Ay.real * RealDt, RealT);

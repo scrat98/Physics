@@ -26,12 +26,8 @@ namespace Physics
         public Argument angle { get; set; }    // [0; 90]
 
         public Argument v0 { get; set; }      // init velocity
-        public Argument v1 { get; set; }      // first Boundary value
-        public Argument v2 { get; set; }      // second Boundary value
-
-        public Argument k1 { get; set; }      // first interval value
-        public Argument k2 { get; set; }      // second inteval value
-        public Argument k3 { get; set; }      // third interval value
+        public Argument k { get; set; }
+        public Argument p { get; set; }
 
         public Arguments()
         {
@@ -41,19 +37,14 @@ namespace Physics
             angle = new Argument();
 
             v0 = new Argument();
-            v1 = new Argument();
-            v2 = new Argument();
-
-            k1 = new Argument();
-            k2 = new Argument();
-            k3 = new Argument();
+            p = new Argument();
+            k = new Argument();
         }
 
         public bool Accepted()
         {
             return (mass.ok && defaultH.ok && g.ok && angle.ok
-                    && v0.ok && v1.ok && v2.ok
-                    && k1.ok && k2.ok && k3.ok);
+                    && v0.ok && k.ok && p.ok);
         }
     }
 }
