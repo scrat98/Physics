@@ -4,6 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using OxyPlot;
+using OxyPlot.Series;
+using OxyPlot.Axes;
+using OxyPlot.Annotations;
+
 namespace Physics
 {
     public partial class MainWindow
@@ -23,6 +28,23 @@ namespace Physics
             VelInput.Text = "50";
             KInput.Text = "0,1";
             PInput.Text = "1,247";
+        }
+
+        private void InitController()
+        {
+            var controller = new PlotController();
+            controller.BindMouseEnter(PlotCommands.HoverPointsOnlyTrack);
+            controller.BindMouseDown(OxyMouseButton.Left, PlotCommands.PanAt);
+
+            HeightPlot.Controller = controller;
+            SPlot.Controller = controller;
+            VPlot.Controller = controller;
+            VxPlot.Controller = controller;
+            VyPlot.Controller = controller;
+            APlot.Controller = controller;
+            AxPlot.Controller = controller;
+            AyPlot.Controller = controller;
+            GlobalPlot.Controller = controller;
         }
 
         public void PlotsUpdate()

@@ -30,6 +30,7 @@ namespace Physics
         public MainWindow()
         {
             InitializeComponent();
+            InitController();
             arguments = new Arguments();
             charts = new Charts(this);
             InitArgs();
