@@ -34,8 +34,36 @@ namespace Physics
             model.LegendPlacement = LegendPlacement.Outside;
             model.LegendPosition = LegendPosition.TopCenter;
             model.LegendOrientation = LegendOrientation.Horizontal;
-
             model.Title = title;
+            
+            var la = new LineAnnotation { Type = LineAnnotationType.Vertical, X = 4 };
+            la.MouseDown += (s, e) =>
+            {
+                if (e.ChangedButton != OxyMouseButton.Left)
+                {
+                    return;
+                }
+
+                la.StrokeThickness *= 5;
+                model.InvalidatePlot(false);
+                e.Handled = true;
+            };
+
+            // Handle mouse movements (note: this is only called when the mousedown event was handled)
+            la.MouseMove += (s, e) =>
+            {
+                la.X = la.InverseTransform(e.Position).X;
+                model.InvalidatePlot(false);
+                e.Handled = true;
+            };
+            la.MouseUp += (s, e) =>
+            {
+                la.StrokeThickness /= 5;
+                model.InvalidatePlot(false);
+                e.Handled = true;
+            };
+            model.Annotations.Add(la);
+
             model.Axes.Add(new LinearAxis
             {
                 MajorGridlineStyle = LineStyle.Solid,

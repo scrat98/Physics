@@ -35,6 +35,7 @@ namespace Physics
             var controller = new PlotController();
             controller.BindMouseEnter(PlotCommands.HoverPointsOnlyTrack);
             controller.BindMouseDown(OxyMouseButton.Left, PlotCommands.PanAt);
+            controller.UnbindMouseDown(OxyMouseButton.Right);
 
             HeightPlot.Controller = controller;
             SPlot.Controller = controller;
