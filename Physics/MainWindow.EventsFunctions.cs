@@ -59,7 +59,7 @@ namespace Physics
                 Log();
                 return;
             }
-            if (arguments.v0.value > 0) okInput(VelInput, arguments.v0);
+            if (arguments.v0.value >= 0) okInput(VelInput, arguments.v0);
             else errorInput(VelInput, arguments.v0);
             charts.Draw();
         }
