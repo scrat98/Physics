@@ -124,30 +124,30 @@
             this.InputContainer.Controls.Add(this.PlanetContainer2, 1, 2);
             this.InputContainer.Controls.Add(this.PlanetContainer3, 2, 2);
             this.InputContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InputContainer.Location = new System.Drawing.Point(3, 2);
-            this.InputContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.InputContainer.Location = new System.Drawing.Point(2, 2);
+            this.InputContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.InputContainer.Name = "InputContainer";
             this.InputContainer.RowCount = 3;
             this.InputContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.InputContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.InputContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.InputContainer.Size = new System.Drawing.Size(978, 156);
+            this.InputContainer.Size = new System.Drawing.Size(734, 156);
             this.InputContainer.TabIndex = 0;
             // 
             // AngContainer
             // 
             this.AngContainer.ColumnCount = 2;
-            this.AngContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.AngContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
             this.AngContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.AngContainer.Controls.Add(this.AngLabel, 0, 0);
             this.AngContainer.Controls.Add(this.AngInput, 1, 0);
             this.AngContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AngContainer.Location = new System.Drawing.Point(735, 2);
-            this.AngContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AngContainer.Location = new System.Drawing.Point(551, 2);
+            this.AngContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AngContainer.Name = "AngContainer";
             this.AngContainer.RowCount = 1;
             this.AngContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.AngContainer.Size = new System.Drawing.Size(240, 36);
+            this.AngContainer.Size = new System.Drawing.Size(181, 36);
             this.AngContainer.TabIndex = 3;
             // 
             // AngLabel
@@ -155,9 +155,10 @@
             this.AngLabel.AutoSize = true;
             this.AngLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AngLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.AngLabel.Location = new System.Drawing.Point(3, 0);
+            this.AngLabel.Location = new System.Drawing.Point(2, 0);
+            this.AngLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AngLabel.Name = "AngLabel";
-            this.AngLabel.Size = new System.Drawing.Size(94, 36);
+            this.AngLabel.Size = new System.Drawing.Size(91, 36);
             this.AngLabel.TabIndex = 0;
             this.AngLabel.Text = "a (gradus)";
             this.AngLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -168,9 +169,10 @@
             // 
             // 
             this.AngInput.CustomButton.Image = null;
-            this.AngInput.CustomButton.Location = new System.Drawing.Point(104, 2);
+            this.AngInput.CustomButton.Location = new System.Drawing.Point(80, 2);
+            this.AngInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AngInput.CustomButton.Name = "";
-            this.AngInput.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.AngInput.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.AngInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.AngInput.CustomButton.TabIndex = 1;
             this.AngInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -179,8 +181,8 @@
             this.AngInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AngInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.AngInput.Lines = new string[0];
-            this.AngInput.Location = new System.Drawing.Point(103, 2);
-            this.AngInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AngInput.Location = new System.Drawing.Point(97, 2);
+            this.AngInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AngInput.MaxLength = 32767;
             this.AngInput.Name = "AngInput";
             this.AngInput.PasswordChar = '\0';
@@ -189,7 +191,7 @@
             this.AngInput.SelectionLength = 0;
             this.AngInput.SelectionStart = 0;
             this.AngInput.ShortcutsEnabled = true;
-            this.AngInput.Size = new System.Drawing.Size(134, 32);
+            this.AngInput.Size = new System.Drawing.Size(82, 32);
             this.AngInput.TabIndex = 1;
             this.AngInput.UseCustomBackColor = true;
             this.AngInput.UseSelectable = true;
@@ -200,17 +202,17 @@
             // MassContainer
             // 
             this.MassContainer.ColumnCount = 2;
-            this.MassContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.MassContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.MassContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MassContainer.Controls.Add(this.MassLabel, 0, 0);
             this.MassContainer.Controls.Add(this.MassInput, 1, 0);
             this.MassContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MassContainer.Location = new System.Drawing.Point(3, 2);
-            this.MassContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MassContainer.Location = new System.Drawing.Point(2, 2);
+            this.MassContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MassContainer.Name = "MassContainer";
             this.MassContainer.RowCount = 1;
             this.MassContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MassContainer.Size = new System.Drawing.Size(238, 36);
+            this.MassContainer.Size = new System.Drawing.Size(179, 36);
             this.MassContainer.TabIndex = 0;
             // 
             // MassLabel
@@ -218,9 +220,10 @@
             this.MassLabel.AutoSize = true;
             this.MassLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MassLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.MassLabel.Location = new System.Drawing.Point(3, 0);
+            this.MassLabel.Location = new System.Drawing.Point(2, 0);
+            this.MassLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MassLabel.Name = "MassLabel";
-            this.MassLabel.Size = new System.Drawing.Size(94, 36);
+            this.MassLabel.Size = new System.Drawing.Size(86, 36);
             this.MassLabel.TabIndex = 0;
             this.MassLabel.Text = "Mass(kg)";
             this.MassLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -232,9 +235,10 @@
             // 
             // 
             this.MassInput.CustomButton.Image = null;
-            this.MassInput.CustomButton.Location = new System.Drawing.Point(102, 2);
+            this.MassInput.CustomButton.Location = new System.Drawing.Point(78, 2);
+            this.MassInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MassInput.CustomButton.Name = "";
-            this.MassInput.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.MassInput.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.MassInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.MassInput.CustomButton.TabIndex = 1;
             this.MassInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -244,8 +248,8 @@
             this.MassInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.MassInput.ForeColor = System.Drawing.Color.Black;
             this.MassInput.Lines = new string[0];
-            this.MassInput.Location = new System.Drawing.Point(103, 2);
-            this.MassInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MassInput.Location = new System.Drawing.Point(92, 2);
+            this.MassInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MassInput.MaxLength = 32767;
             this.MassInput.Name = "MassInput";
             this.MassInput.PasswordChar = '\0';
@@ -254,7 +258,7 @@
             this.MassInput.SelectionLength = 0;
             this.MassInput.SelectionStart = 0;
             this.MassInput.ShortcutsEnabled = true;
-            this.MassInput.Size = new System.Drawing.Size(132, 32);
+            this.MassInput.Size = new System.Drawing.Size(85, 32);
             this.MassInput.TabIndex = 0;
             this.MassInput.UseCustomBackColor = true;
             this.MassInput.UseSelectable = true;
@@ -265,17 +269,17 @@
             // VelContainer
             // 
             this.VelContainer.ColumnCount = 2;
-            this.VelContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.VelContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.VelContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.VelContainer.Controls.Add(this.VelLabel, 0, 0);
             this.VelContainer.Controls.Add(this.VelInput, 1, 0);
             this.VelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VelContainer.Location = new System.Drawing.Point(491, 2);
-            this.VelContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VelContainer.Location = new System.Drawing.Point(368, 2);
+            this.VelContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VelContainer.Name = "VelContainer";
             this.VelContainer.RowCount = 1;
             this.VelContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.VelContainer.Size = new System.Drawing.Size(238, 36);
+            this.VelContainer.Size = new System.Drawing.Size(179, 36);
             this.VelContainer.TabIndex = 2;
             // 
             // VelLabel
@@ -283,9 +287,10 @@
             this.VelLabel.AutoSize = true;
             this.VelLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VelLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.VelLabel.Location = new System.Drawing.Point(3, 0);
+            this.VelLabel.Location = new System.Drawing.Point(2, 0);
+            this.VelLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.VelLabel.Name = "VelLabel";
-            this.VelLabel.Size = new System.Drawing.Size(94, 36);
+            this.VelLabel.Size = new System.Drawing.Size(86, 36);
             this.VelLabel.TabIndex = 0;
             this.VelLabel.Text = "V₀(m/s)";
             this.VelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -296,9 +301,10 @@
             // 
             // 
             this.VelInput.CustomButton.Image = null;
-            this.VelInput.CustomButton.Location = new System.Drawing.Point(102, 2);
+            this.VelInput.CustomButton.Location = new System.Drawing.Point(78, 2);
+            this.VelInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VelInput.CustomButton.Name = "";
-            this.VelInput.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.VelInput.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.VelInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.VelInput.CustomButton.TabIndex = 1;
             this.VelInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -307,8 +313,8 @@
             this.VelInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VelInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.VelInput.Lines = new string[0];
-            this.VelInput.Location = new System.Drawing.Point(103, 2);
-            this.VelInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VelInput.Location = new System.Drawing.Point(92, 2);
+            this.VelInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VelInput.MaxLength = 32767;
             this.VelInput.Name = "VelInput";
             this.VelInput.PasswordChar = '\0';
@@ -317,7 +323,7 @@
             this.VelInput.SelectionLength = 0;
             this.VelInput.SelectionStart = 0;
             this.VelInput.ShortcutsEnabled = true;
-            this.VelInput.Size = new System.Drawing.Size(132, 32);
+            this.VelInput.Size = new System.Drawing.Size(85, 32);
             this.VelInput.TabIndex = 1;
             this.VelInput.UseCustomBackColor = true;
             this.VelInput.UseSelectable = true;
@@ -328,17 +334,17 @@
             // HeightContainer
             // 
             this.HeightContainer.ColumnCount = 2;
-            this.HeightContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.HeightContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.HeightContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.HeightContainer.Controls.Add(this.HeightLabel, 0, 0);
             this.HeightContainer.Controls.Add(this.HeightInput, 1, 0);
             this.HeightContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HeightContainer.Location = new System.Drawing.Point(247, 2);
-            this.HeightContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HeightContainer.Location = new System.Drawing.Point(185, 2);
+            this.HeightContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HeightContainer.Name = "HeightContainer";
             this.HeightContainer.RowCount = 1;
             this.HeightContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.HeightContainer.Size = new System.Drawing.Size(238, 36);
+            this.HeightContainer.Size = new System.Drawing.Size(179, 36);
             this.HeightContainer.TabIndex = 14;
             // 
             // HeightLabel
@@ -346,9 +352,10 @@
             this.HeightLabel.AutoSize = true;
             this.HeightLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HeightLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.HeightLabel.Location = new System.Drawing.Point(3, 0);
+            this.HeightLabel.Location = new System.Drawing.Point(2, 0);
+            this.HeightLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.HeightLabel.Name = "HeightLabel";
-            this.HeightLabel.Size = new System.Drawing.Size(94, 36);
+            this.HeightLabel.Size = new System.Drawing.Size(86, 36);
             this.HeightLabel.TabIndex = 0;
             this.HeightLabel.Text = "H₀(m)";
             this.HeightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -359,9 +366,10 @@
             // 
             // 
             this.HeightInput.CustomButton.Image = null;
-            this.HeightInput.CustomButton.Location = new System.Drawing.Point(102, 2);
+            this.HeightInput.CustomButton.Location = new System.Drawing.Point(78, 2);
+            this.HeightInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HeightInput.CustomButton.Name = "";
-            this.HeightInput.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.HeightInput.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.HeightInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.HeightInput.CustomButton.TabIndex = 1;
             this.HeightInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -370,8 +378,8 @@
             this.HeightInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HeightInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.HeightInput.Lines = new string[0];
-            this.HeightInput.Location = new System.Drawing.Point(103, 2);
-            this.HeightInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HeightInput.Location = new System.Drawing.Point(92, 2);
+            this.HeightInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HeightInput.MaxLength = 32767;
             this.HeightInput.Name = "HeightInput";
             this.HeightInput.PasswordChar = '\0';
@@ -380,7 +388,7 @@
             this.HeightInput.SelectionLength = 0;
             this.HeightInput.SelectionStart = 0;
             this.HeightInput.ShortcutsEnabled = true;
-            this.HeightInput.Size = new System.Drawing.Size(132, 32);
+            this.HeightInput.Size = new System.Drawing.Size(85, 32);
             this.HeightInput.TabIndex = 1;
             this.HeightInput.UseCustomBackColor = true;
             this.HeightInput.UseSelectable = true;
@@ -391,17 +399,17 @@
             // gContainer
             // 
             this.gContainer.ColumnCount = 2;
-            this.gContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.gContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.gContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.gContainer.Controls.Add(this.gLabel, 0, 0);
             this.gContainer.Controls.Add(this.gInput, 1, 0);
             this.gContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gContainer.Location = new System.Drawing.Point(3, 42);
-            this.gContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gContainer.Location = new System.Drawing.Point(2, 42);
+            this.gContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gContainer.Name = "gContainer";
             this.gContainer.RowCount = 1;
             this.gContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.gContainer.Size = new System.Drawing.Size(238, 36);
+            this.gContainer.Size = new System.Drawing.Size(179, 36);
             this.gContainer.TabIndex = 4;
             // 
             // gLabel
@@ -409,9 +417,10 @@
             this.gLabel.AutoSize = true;
             this.gLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.gLabel.Location = new System.Drawing.Point(3, 0);
+            this.gLabel.Location = new System.Drawing.Point(2, 0);
+            this.gLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.gLabel.Name = "gLabel";
-            this.gLabel.Size = new System.Drawing.Size(94, 36);
+            this.gLabel.Size = new System.Drawing.Size(86, 36);
             this.gLabel.TabIndex = 0;
             this.gLabel.Text = "g(m/s²)";
             this.gLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -422,9 +431,10 @@
             // 
             // 
             this.gInput.CustomButton.Image = null;
-            this.gInput.CustomButton.Location = new System.Drawing.Point(102, 2);
+            this.gInput.CustomButton.Location = new System.Drawing.Point(78, 2);
+            this.gInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gInput.CustomButton.Name = "";
-            this.gInput.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.gInput.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.gInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.gInput.CustomButton.TabIndex = 1;
             this.gInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -433,8 +443,8 @@
             this.gInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.gInput.Lines = new string[0];
-            this.gInput.Location = new System.Drawing.Point(103, 2);
-            this.gInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gInput.Location = new System.Drawing.Point(92, 2);
+            this.gInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gInput.MaxLength = 32767;
             this.gInput.Name = "gInput";
             this.gInput.PasswordChar = '\0';
@@ -444,7 +454,7 @@
             this.gInput.SelectionLength = 0;
             this.gInput.SelectionStart = 0;
             this.gInput.ShortcutsEnabled = true;
-            this.gInput.Size = new System.Drawing.Size(132, 32);
+            this.gInput.Size = new System.Drawing.Size(85, 32);
             this.gInput.TabIndex = 0;
             this.gInput.UseCustomBackColor = true;
             this.gInput.UseSelectable = true;
@@ -455,17 +465,17 @@
             // PContainer
             // 
             this.PContainer.ColumnCount = 2;
-            this.PContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.PContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.PContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.PContainer.Controls.Add(this.pLabel, 0, 0);
             this.PContainer.Controls.Add(this.PInput, 1, 0);
             this.PContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PContainer.Location = new System.Drawing.Point(247, 42);
-            this.PContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PContainer.Location = new System.Drawing.Point(185, 42);
+            this.PContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PContainer.Name = "PContainer";
             this.PContainer.RowCount = 1;
             this.PContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.PContainer.Size = new System.Drawing.Size(238, 36);
+            this.PContainer.Size = new System.Drawing.Size(179, 36);
             this.PContainer.TabIndex = 15;
             // 
             // pLabel
@@ -473,9 +483,10 @@
             this.pLabel.AutoSize = true;
             this.pLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.pLabel.Location = new System.Drawing.Point(3, 0);
+            this.pLabel.Location = new System.Drawing.Point(2, 0);
+            this.pLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pLabel.Name = "pLabel";
-            this.pLabel.Size = new System.Drawing.Size(94, 36);
+            this.pLabel.Size = new System.Drawing.Size(86, 36);
             this.pLabel.TabIndex = 0;
             this.pLabel.Text = "ρ(kg/m³)";
             this.pLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -486,9 +497,10 @@
             // 
             // 
             this.PInput.CustomButton.Image = null;
-            this.PInput.CustomButton.Location = new System.Drawing.Point(102, 2);
+            this.PInput.CustomButton.Location = new System.Drawing.Point(78, 2);
+            this.PInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PInput.CustomButton.Name = "";
-            this.PInput.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.PInput.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.PInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.PInput.CustomButton.TabIndex = 1;
             this.PInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -497,8 +509,8 @@
             this.PInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.PInput.Lines = new string[0];
-            this.PInput.Location = new System.Drawing.Point(103, 2);
-            this.PInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PInput.Location = new System.Drawing.Point(92, 2);
+            this.PInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PInput.MaxLength = 32767;
             this.PInput.Name = "PInput";
             this.PInput.PasswordChar = '\0';
@@ -508,7 +520,7 @@
             this.PInput.SelectionLength = 0;
             this.PInput.SelectionStart = 0;
             this.PInput.ShortcutsEnabled = true;
-            this.PInput.Size = new System.Drawing.Size(132, 32);
+            this.PInput.Size = new System.Drawing.Size(85, 32);
             this.PInput.TabIndex = 0;
             this.PInput.UseCustomBackColor = true;
             this.PInput.UseSelectable = true;
@@ -519,17 +531,17 @@
             // KContainer
             // 
             this.KContainer.ColumnCount = 2;
-            this.KContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.KContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
             this.KContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.KContainer.Controls.Add(this.KLabel, 0, 0);
             this.KContainer.Controls.Add(this.KInput, 1, 0);
             this.KContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.KContainer.Location = new System.Drawing.Point(491, 42);
-            this.KContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.KContainer.Location = new System.Drawing.Point(368, 42);
+            this.KContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.KContainer.Name = "KContainer";
             this.KContainer.RowCount = 1;
             this.KContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.KContainer.Size = new System.Drawing.Size(238, 36);
+            this.KContainer.Size = new System.Drawing.Size(179, 36);
             this.KContainer.TabIndex = 16;
             // 
             // KLabel
@@ -537,9 +549,10 @@
             this.KLabel.AutoSize = true;
             this.KLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KLabel.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.KLabel.Location = new System.Drawing.Point(3, 0);
+            this.KLabel.Location = new System.Drawing.Point(2, 0);
+            this.KLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.KLabel.Name = "KLabel";
-            this.KLabel.Size = new System.Drawing.Size(94, 36);
+            this.KLabel.Size = new System.Drawing.Size(86, 36);
             this.KLabel.TabIndex = 0;
             this.KLabel.Text = "k";
             this.KLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -550,9 +563,10 @@
             // 
             // 
             this.KInput.CustomButton.Image = null;
-            this.KInput.CustomButton.Location = new System.Drawing.Point(102, 2);
+            this.KInput.CustomButton.Location = new System.Drawing.Point(78, 2);
+            this.KInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.KInput.CustomButton.Name = "";
-            this.KInput.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.KInput.CustomButton.Size = new System.Drawing.Size(19, 19);
             this.KInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.KInput.CustomButton.TabIndex = 1;
             this.KInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -561,8 +575,8 @@
             this.KInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.KInput.Lines = new string[0];
-            this.KInput.Location = new System.Drawing.Point(103, 2);
-            this.KInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.KInput.Location = new System.Drawing.Point(92, 2);
+            this.KInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.KInput.MaxLength = 32767;
             this.KInput.Name = "KInput";
             this.KInput.PasswordChar = '\0';
@@ -572,7 +586,7 @@
             this.KInput.SelectionLength = 0;
             this.KInput.SelectionStart = 0;
             this.KInput.ShortcutsEnabled = true;
-            this.KInput.Size = new System.Drawing.Size(132, 32);
+            this.KInput.Size = new System.Drawing.Size(85, 32);
             this.KInput.TabIndex = 0;
             this.KInput.UseCustomBackColor = true;
             this.KInput.UseSelectable = true;
@@ -589,13 +603,12 @@
             this.PlanetContainer1.Controls.Add(this.VenusG, 1, 0);
             this.PlanetContainer1.Controls.Add(this.MercuryG, 0, 0);
             this.PlanetContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PlanetContainer1.Location = new System.Drawing.Point(4, 84);
-            this.PlanetContainer1.Margin = new System.Windows.Forms.Padding(4);
+            this.PlanetContainer1.Location = new System.Drawing.Point(3, 83);
             this.PlanetContainer1.Name = "PlanetContainer1";
             this.PlanetContainer1.RowCount = 2;
             this.PlanetContainer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PlanetContainer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PlanetContainer1.Size = new System.Drawing.Size(236, 72);
+            this.PlanetContainer1.Size = new System.Drawing.Size(177, 74);
             this.PlanetContainer1.TabIndex = 11;
             // 
             // UranusG
@@ -603,10 +616,9 @@
             this.PlanetContainer1.SetColumnSpan(this.UranusG, 2);
             this.UranusG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UranusG.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.UranusG.Location = new System.Drawing.Point(4, 40);
-            this.UranusG.Margin = new System.Windows.Forms.Padding(4);
+            this.UranusG.Location = new System.Drawing.Point(3, 40);
             this.UranusG.Name = "UranusG";
-            this.UranusG.Size = new System.Drawing.Size(228, 28);
+            this.UranusG.Size = new System.Drawing.Size(171, 31);
             this.UranusG.TabIndex = 2;
             this.UranusG.Text = "Uranus";
             this.UranusG.UseSelectable = true;
@@ -616,10 +628,9 @@
             // 
             this.VenusG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VenusG.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.VenusG.Location = new System.Drawing.Point(122, 4);
-            this.VenusG.Margin = new System.Windows.Forms.Padding(4);
+            this.VenusG.Location = new System.Drawing.Point(91, 3);
             this.VenusG.Name = "VenusG";
-            this.VenusG.Size = new System.Drawing.Size(110, 28);
+            this.VenusG.Size = new System.Drawing.Size(83, 31);
             this.VenusG.TabIndex = 1;
             this.VenusG.Text = "Venus";
             this.VenusG.UseSelectable = true;
@@ -629,10 +640,9 @@
             // 
             this.MercuryG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MercuryG.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.MercuryG.Location = new System.Drawing.Point(4, 4);
-            this.MercuryG.Margin = new System.Windows.Forms.Padding(4);
+            this.MercuryG.Location = new System.Drawing.Point(3, 3);
             this.MercuryG.Name = "MercuryG";
-            this.MercuryG.Size = new System.Drawing.Size(110, 28);
+            this.MercuryG.Size = new System.Drawing.Size(82, 31);
             this.MercuryG.TabIndex = 0;
             this.MercuryG.Text = "Mercury";
             this.MercuryG.UseSelectable = true;
@@ -647,13 +657,12 @@
             this.PlanetContainer2.Controls.Add(this.MarsG, 1, 0);
             this.PlanetContainer2.Controls.Add(this.EarthG, 0, 0);
             this.PlanetContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PlanetContainer2.Location = new System.Drawing.Point(248, 84);
-            this.PlanetContainer2.Margin = new System.Windows.Forms.Padding(4);
+            this.PlanetContainer2.Location = new System.Drawing.Point(186, 83);
             this.PlanetContainer2.Name = "PlanetContainer2";
             this.PlanetContainer2.RowCount = 2;
             this.PlanetContainer2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PlanetContainer2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PlanetContainer2.Size = new System.Drawing.Size(236, 72);
+            this.PlanetContainer2.Size = new System.Drawing.Size(177, 74);
             this.PlanetContainer2.TabIndex = 12;
             // 
             // NeptuneG
@@ -661,10 +670,9 @@
             this.PlanetContainer2.SetColumnSpan(this.NeptuneG, 2);
             this.NeptuneG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NeptuneG.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.NeptuneG.Location = new System.Drawing.Point(4, 40);
-            this.NeptuneG.Margin = new System.Windows.Forms.Padding(4);
+            this.NeptuneG.Location = new System.Drawing.Point(3, 40);
             this.NeptuneG.Name = "NeptuneG";
-            this.NeptuneG.Size = new System.Drawing.Size(228, 28);
+            this.NeptuneG.Size = new System.Drawing.Size(171, 31);
             this.NeptuneG.TabIndex = 2;
             this.NeptuneG.Text = "Neptune";
             this.NeptuneG.UseSelectable = true;
@@ -674,10 +682,9 @@
             // 
             this.MarsG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MarsG.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.MarsG.Location = new System.Drawing.Point(122, 4);
-            this.MarsG.Margin = new System.Windows.Forms.Padding(4);
+            this.MarsG.Location = new System.Drawing.Point(91, 3);
             this.MarsG.Name = "MarsG";
-            this.MarsG.Size = new System.Drawing.Size(110, 28);
+            this.MarsG.Size = new System.Drawing.Size(83, 31);
             this.MarsG.TabIndex = 1;
             this.MarsG.Text = "Mars";
             this.MarsG.UseSelectable = true;
@@ -687,10 +694,9 @@
             // 
             this.EarthG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EarthG.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.EarthG.Location = new System.Drawing.Point(4, 4);
-            this.EarthG.Margin = new System.Windows.Forms.Padding(4);
+            this.EarthG.Location = new System.Drawing.Point(3, 3);
             this.EarthG.Name = "EarthG";
-            this.EarthG.Size = new System.Drawing.Size(110, 28);
+            this.EarthG.Size = new System.Drawing.Size(82, 31);
             this.EarthG.TabIndex = 0;
             this.EarthG.Text = "Earth";
             this.EarthG.UseSelectable = true;
@@ -705,13 +711,12 @@
             this.PlanetContainer3.Controls.Add(this.SaturnG, 1, 0);
             this.PlanetContainer3.Controls.Add(this.JupiterG, 0, 0);
             this.PlanetContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PlanetContainer3.Location = new System.Drawing.Point(492, 84);
-            this.PlanetContainer3.Margin = new System.Windows.Forms.Padding(4);
+            this.PlanetContainer3.Location = new System.Drawing.Point(369, 83);
             this.PlanetContainer3.Name = "PlanetContainer3";
             this.PlanetContainer3.RowCount = 2;
             this.PlanetContainer3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PlanetContainer3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.PlanetContainer3.Size = new System.Drawing.Size(236, 72);
+            this.PlanetContainer3.Size = new System.Drawing.Size(177, 74);
             this.PlanetContainer3.TabIndex = 13;
             // 
             // PlutoG
@@ -719,10 +724,9 @@
             this.PlanetContainer3.SetColumnSpan(this.PlutoG, 2);
             this.PlutoG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PlutoG.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.PlutoG.Location = new System.Drawing.Point(4, 40);
-            this.PlutoG.Margin = new System.Windows.Forms.Padding(4);
+            this.PlutoG.Location = new System.Drawing.Point(3, 40);
             this.PlutoG.Name = "PlutoG";
-            this.PlutoG.Size = new System.Drawing.Size(228, 28);
+            this.PlutoG.Size = new System.Drawing.Size(171, 31);
             this.PlutoG.TabIndex = 2;
             this.PlutoG.Text = "Pluto";
             this.PlutoG.UseSelectable = true;
@@ -732,10 +736,9 @@
             // 
             this.SaturnG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SaturnG.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.SaturnG.Location = new System.Drawing.Point(122, 4);
-            this.SaturnG.Margin = new System.Windows.Forms.Padding(4);
+            this.SaturnG.Location = new System.Drawing.Point(91, 3);
             this.SaturnG.Name = "SaturnG";
-            this.SaturnG.Size = new System.Drawing.Size(110, 28);
+            this.SaturnG.Size = new System.Drawing.Size(83, 31);
             this.SaturnG.TabIndex = 1;
             this.SaturnG.Text = "Saturn";
             this.SaturnG.UseSelectable = true;
@@ -745,10 +748,9 @@
             // 
             this.JupiterG.Dock = System.Windows.Forms.DockStyle.Fill;
             this.JupiterG.FontSize = MetroFramework.MetroButtonSize.Tall;
-            this.JupiterG.Location = new System.Drawing.Point(4, 4);
-            this.JupiterG.Margin = new System.Windows.Forms.Padding(4);
+            this.JupiterG.Location = new System.Drawing.Point(3, 3);
             this.JupiterG.Name = "JupiterG";
-            this.JupiterG.Size = new System.Drawing.Size(110, 28);
+            this.JupiterG.Size = new System.Drawing.Size(82, 31);
             this.JupiterG.TabIndex = 0;
             this.JupiterG.Text = "Jupiter";
             this.JupiterG.UseSelectable = true;
@@ -761,13 +763,13 @@
             this.WindowContainer.Controls.Add(this.InputContainer, 0, 0);
             this.WindowContainer.Controls.Add(this.PlotTabs, 0, 1);
             this.WindowContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WindowContainer.Location = new System.Drawing.Point(20, 30);
-            this.WindowContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.WindowContainer.Location = new System.Drawing.Point(15, 24);
+            this.WindowContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.WindowContainer.Name = "WindowContainer";
             this.WindowContainer.RowCount = 2;
             this.WindowContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 160F));
             this.WindowContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.WindowContainer.Size = new System.Drawing.Size(984, 718);
+            this.WindowContainer.Size = new System.Drawing.Size(738, 584);
             this.WindowContainer.TabIndex = 1;
             // 
             // PlotTabs
@@ -783,11 +785,11 @@
             this.PlotTabs.Controls.Add(this.AyTab);
             this.PlotTabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PlotTabs.FontSize = MetroFramework.MetroTabControlSize.Tall;
-            this.PlotTabs.Location = new System.Drawing.Point(3, 162);
-            this.PlotTabs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PlotTabs.Location = new System.Drawing.Point(2, 162);
+            this.PlotTabs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PlotTabs.Name = "PlotTabs";
             this.PlotTabs.SelectedIndex = 8;
-            this.PlotTabs.Size = new System.Drawing.Size(978, 554);
+            this.PlotTabs.Size = new System.Drawing.Size(734, 420);
             this.PlotTabs.TabIndex = 1;
             this.PlotTabs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.PlotTabs.UseSelectable = true;
@@ -797,23 +799,25 @@
             this.GlobalTab.Controls.Add(this.GlobalPlot);
             this.GlobalTab.HorizontalScrollbarBarColor = true;
             this.GlobalTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.GlobalTab.HorizontalScrollbarSize = 10;
+            this.GlobalTab.HorizontalScrollbarSize = 8;
             this.GlobalTab.Location = new System.Drawing.Point(4, 44);
+            this.GlobalTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GlobalTab.Name = "GlobalTab";
-            this.GlobalTab.Size = new System.Drawing.Size(951, 491);
+            this.GlobalTab.Size = new System.Drawing.Size(726, 402);
             this.GlobalTab.TabIndex = 10;
             this.GlobalTab.Text = "H(S)";
             this.GlobalTab.VerticalScrollbarBarColor = true;
             this.GlobalTab.VerticalScrollbarHighlightOnWheel = false;
-            this.GlobalTab.VerticalScrollbarSize = 10;
+            this.GlobalTab.VerticalScrollbarSize = 8;
             // 
             // GlobalPlot
             // 
             this.GlobalPlot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GlobalPlot.Location = new System.Drawing.Point(0, 0);
+            this.GlobalPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.GlobalPlot.Name = "GlobalPlot";
             this.GlobalPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.GlobalPlot.Size = new System.Drawing.Size(951, 491);
+            this.GlobalPlot.Size = new System.Drawing.Size(726, 402);
             this.GlobalPlot.TabIndex = 2;
             this.GlobalPlot.Text = "plotView1";
             this.GlobalPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
@@ -825,27 +829,27 @@
             this.HeightPage.Controls.Add(this.HeightPlot);
             this.HeightPage.HorizontalScrollbarBarColor = true;
             this.HeightPage.HorizontalScrollbarHighlightOnWheel = false;
-            this.HeightPage.HorizontalScrollbarSize = 10;
+            this.HeightPage.HorizontalScrollbarSize = 8;
             this.HeightPage.Location = new System.Drawing.Point(4, 44);
-            this.HeightPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HeightPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HeightPage.Name = "HeightPage";
-            this.HeightPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.HeightPage.Size = new System.Drawing.Size(951, 491);
+            this.HeightPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HeightPage.Size = new System.Drawing.Size(726, 402);
             this.HeightPage.TabIndex = 2;
             this.HeightPage.Text = "H(t)";
             this.HeightPage.UseVisualStyleBackColor = true;
             this.HeightPage.VerticalScrollbarBarColor = true;
             this.HeightPage.VerticalScrollbarHighlightOnWheel = false;
-            this.HeightPage.VerticalScrollbarSize = 10;
+            this.HeightPage.VerticalScrollbarSize = 8;
             // 
             // HeightPlot
             // 
             this.HeightPlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HeightPlot.Location = new System.Drawing.Point(3, 2);
-            this.HeightPlot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HeightPlot.Location = new System.Drawing.Point(2, 2);
+            this.HeightPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HeightPlot.Name = "HeightPlot";
             this.HeightPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.HeightPlot.Size = new System.Drawing.Size(945, 487);
+            this.HeightPlot.Size = new System.Drawing.Size(722, 398);
             this.HeightPlot.TabIndex = 0;
             this.HeightPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.HeightPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -856,27 +860,27 @@
             this.STab.Controls.Add(this.SPlot);
             this.STab.HorizontalScrollbarBarColor = true;
             this.STab.HorizontalScrollbarHighlightOnWheel = false;
-            this.STab.HorizontalScrollbarSize = 10;
+            this.STab.HorizontalScrollbarSize = 8;
             this.STab.Location = new System.Drawing.Point(4, 44);
-            this.STab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.STab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.STab.Name = "STab";
-            this.STab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.STab.Size = new System.Drawing.Size(951, 491);
+            this.STab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STab.Size = new System.Drawing.Size(726, 402);
             this.STab.TabIndex = 3;
             this.STab.Text = "S(t)";
             this.STab.UseVisualStyleBackColor = true;
             this.STab.VerticalScrollbarBarColor = true;
             this.STab.VerticalScrollbarHighlightOnWheel = false;
-            this.STab.VerticalScrollbarSize = 10;
+            this.STab.VerticalScrollbarSize = 8;
             // 
             // SPlot
             // 
             this.SPlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SPlot.Location = new System.Drawing.Point(3, 2);
-            this.SPlot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SPlot.Location = new System.Drawing.Point(2, 2);
+            this.SPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SPlot.Name = "SPlot";
             this.SPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.SPlot.Size = new System.Drawing.Size(945, 487);
+            this.SPlot.Size = new System.Drawing.Size(722, 398);
             this.SPlot.TabIndex = 0;
             this.SPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.SPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -887,27 +891,27 @@
             this.VTab.Controls.Add(this.VPlot);
             this.VTab.HorizontalScrollbarBarColor = true;
             this.VTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.VTab.HorizontalScrollbarSize = 10;
+            this.VTab.HorizontalScrollbarSize = 8;
             this.VTab.Location = new System.Drawing.Point(4, 44);
-            this.VTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VTab.Name = "VTab";
-            this.VTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VTab.Size = new System.Drawing.Size(951, 491);
+            this.VTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VTab.Size = new System.Drawing.Size(726, 402);
             this.VTab.TabIndex = 4;
             this.VTab.Text = "V(t)";
             this.VTab.UseVisualStyleBackColor = true;
             this.VTab.VerticalScrollbarBarColor = true;
             this.VTab.VerticalScrollbarHighlightOnWheel = false;
-            this.VTab.VerticalScrollbarSize = 10;
+            this.VTab.VerticalScrollbarSize = 8;
             // 
             // VPlot
             // 
             this.VPlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VPlot.Location = new System.Drawing.Point(3, 2);
-            this.VPlot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VPlot.Location = new System.Drawing.Point(2, 2);
+            this.VPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VPlot.Name = "VPlot";
             this.VPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VPlot.Size = new System.Drawing.Size(945, 487);
+            this.VPlot.Size = new System.Drawing.Size(722, 398);
             this.VPlot.TabIndex = 0;
             this.VPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -918,27 +922,27 @@
             this.VxTab.Controls.Add(this.VxPlot);
             this.VxTab.HorizontalScrollbarBarColor = true;
             this.VxTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.VxTab.HorizontalScrollbarSize = 10;
+            this.VxTab.HorizontalScrollbarSize = 8;
             this.VxTab.Location = new System.Drawing.Point(4, 44);
-            this.VxTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VxTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VxTab.Name = "VxTab";
-            this.VxTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VxTab.Size = new System.Drawing.Size(951, 491);
+            this.VxTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VxTab.Size = new System.Drawing.Size(726, 402);
             this.VxTab.TabIndex = 5;
             this.VxTab.Text = "Vx(t)";
             this.VxTab.UseVisualStyleBackColor = true;
             this.VxTab.VerticalScrollbarBarColor = true;
             this.VxTab.VerticalScrollbarHighlightOnWheel = false;
-            this.VxTab.VerticalScrollbarSize = 10;
+            this.VxTab.VerticalScrollbarSize = 8;
             // 
             // VxPlot
             // 
             this.VxPlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VxPlot.Location = new System.Drawing.Point(3, 2);
-            this.VxPlot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VxPlot.Location = new System.Drawing.Point(2, 2);
+            this.VxPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VxPlot.Name = "VxPlot";
             this.VxPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VxPlot.Size = new System.Drawing.Size(945, 487);
+            this.VxPlot.Size = new System.Drawing.Size(722, 398);
             this.VxPlot.TabIndex = 0;
             this.VxPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VxPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -949,27 +953,27 @@
             this.VyTab.Controls.Add(this.VyPlot);
             this.VyTab.HorizontalScrollbarBarColor = true;
             this.VyTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.VyTab.HorizontalScrollbarSize = 10;
+            this.VyTab.HorizontalScrollbarSize = 8;
             this.VyTab.Location = new System.Drawing.Point(4, 44);
-            this.VyTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VyTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VyTab.Name = "VyTab";
-            this.VyTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.VyTab.Size = new System.Drawing.Size(951, 491);
+            this.VyTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VyTab.Size = new System.Drawing.Size(726, 402);
             this.VyTab.TabIndex = 6;
             this.VyTab.Text = "Vy(t)";
             this.VyTab.UseVisualStyleBackColor = true;
             this.VyTab.VerticalScrollbarBarColor = true;
             this.VyTab.VerticalScrollbarHighlightOnWheel = false;
-            this.VyTab.VerticalScrollbarSize = 10;
+            this.VyTab.VerticalScrollbarSize = 8;
             // 
             // VyPlot
             // 
             this.VyPlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.VyPlot.Location = new System.Drawing.Point(3, 2);
-            this.VyPlot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.VyPlot.Location = new System.Drawing.Point(2, 2);
+            this.VyPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VyPlot.Name = "VyPlot";
             this.VyPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VyPlot.Size = new System.Drawing.Size(945, 487);
+            this.VyPlot.Size = new System.Drawing.Size(722, 398);
             this.VyPlot.TabIndex = 0;
             this.VyPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -980,27 +984,26 @@
             this.ATab.Controls.Add(this.APlot);
             this.ATab.HorizontalScrollbarBarColor = true;
             this.ATab.HorizontalScrollbarHighlightOnWheel = false;
-            this.ATab.HorizontalScrollbarSize = 10;
+            this.ATab.HorizontalScrollbarSize = 8;
             this.ATab.Location = new System.Drawing.Point(4, 44);
-            this.ATab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ATab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ATab.Name = "ATab";
-            this.ATab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ATab.Size = new System.Drawing.Size(951, 491);
+            this.ATab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ATab.Size = new System.Drawing.Size(726, 402);
             this.ATab.TabIndex = 7;
             this.ATab.Text = "A(t)";
             this.ATab.UseVisualStyleBackColor = true;
             this.ATab.VerticalScrollbarBarColor = true;
             this.ATab.VerticalScrollbarHighlightOnWheel = false;
-            this.ATab.VerticalScrollbarSize = 10;
+            this.ATab.VerticalScrollbarSize = 8;
             // 
             // APlot
             // 
             this.APlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.APlot.Location = new System.Drawing.Point(3, 2);
-            this.APlot.Margin = new System.Windows.Forms.Padding(4);
+            this.APlot.Location = new System.Drawing.Point(2, 2);
             this.APlot.Name = "APlot";
             this.APlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.APlot.Size = new System.Drawing.Size(945, 487);
+            this.APlot.Size = new System.Drawing.Size(722, 398);
             this.APlot.TabIndex = 0;
             this.APlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.APlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1011,27 +1014,26 @@
             this.AxTab.Controls.Add(this.AxPlot);
             this.AxTab.HorizontalScrollbarBarColor = true;
             this.AxTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.AxTab.HorizontalScrollbarSize = 10;
+            this.AxTab.HorizontalScrollbarSize = 8;
             this.AxTab.Location = new System.Drawing.Point(4, 44);
-            this.AxTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AxTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AxTab.Name = "AxTab";
-            this.AxTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AxTab.Size = new System.Drawing.Size(951, 491);
+            this.AxTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AxTab.Size = new System.Drawing.Size(726, 402);
             this.AxTab.TabIndex = 8;
             this.AxTab.Text = "Ax(t)";
             this.AxTab.UseVisualStyleBackColor = true;
             this.AxTab.VerticalScrollbarBarColor = true;
             this.AxTab.VerticalScrollbarHighlightOnWheel = false;
-            this.AxTab.VerticalScrollbarSize = 10;
+            this.AxTab.VerticalScrollbarSize = 8;
             // 
             // AxPlot
             // 
             this.AxPlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AxPlot.Location = new System.Drawing.Point(3, 2);
-            this.AxPlot.Margin = new System.Windows.Forms.Padding(4);
+            this.AxPlot.Location = new System.Drawing.Point(2, 2);
             this.AxPlot.Name = "AxPlot";
             this.AxPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.AxPlot.Size = new System.Drawing.Size(945, 487);
+            this.AxPlot.Size = new System.Drawing.Size(722, 398);
             this.AxPlot.TabIndex = 0;
             this.AxPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.AxPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1042,27 +1044,26 @@
             this.AyTab.Controls.Add(this.AyPlot);
             this.AyTab.HorizontalScrollbarBarColor = true;
             this.AyTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.AyTab.HorizontalScrollbarSize = 10;
+            this.AyTab.HorizontalScrollbarSize = 8;
             this.AyTab.Location = new System.Drawing.Point(4, 44);
-            this.AyTab.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AyTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AyTab.Name = "AyTab";
-            this.AyTab.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AyTab.Size = new System.Drawing.Size(970, 506);
+            this.AyTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AyTab.Size = new System.Drawing.Size(726, 372);
             this.AyTab.TabIndex = 9;
             this.AyTab.Text = "Ay(t)";
             this.AyTab.UseVisualStyleBackColor = true;
             this.AyTab.VerticalScrollbarBarColor = true;
             this.AyTab.VerticalScrollbarHighlightOnWheel = false;
-            this.AyTab.VerticalScrollbarSize = 10;
+            this.AyTab.VerticalScrollbarSize = 8;
             // 
             // AyPlot
             // 
             this.AyPlot.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AyPlot.Location = new System.Drawing.Point(3, 2);
-            this.AyPlot.Margin = new System.Windows.Forms.Padding(4);
+            this.AyPlot.Location = new System.Drawing.Point(2, 2);
             this.AyPlot.Name = "AyPlot";
             this.AyPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.AyPlot.Size = new System.Drawing.Size(964, 502);
+            this.AyPlot.Size = new System.Drawing.Size(722, 368);
             this.AyPlot.TabIndex = 0;
             this.AyPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.AyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1070,16 +1071,16 @@
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Forms.MetroFormBorderStyle.FixedSingle;
-            this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.ClientSize = new System.Drawing.Size(768, 624);
             this.Controls.Add(this.WindowContainer);
             this.DisplayHeader = false;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(600, 488);
             this.Name = "MainWindow";
-            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
+            this.Padding = new System.Windows.Forms.Padding(15, 24, 15, 16);
             this.Text = "Physics";
             this.InputContainer.ResumeLayout(false);
             this.AngContainer.ResumeLayout(false);
