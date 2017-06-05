@@ -123,7 +123,7 @@ namespace Physics
             while (true)
             {
                 // theory update
-                if(H.theory > 0)
+                if(H.theory >= 0)
                 {
                     // Dt calculate TODO
                     TheoryDt = window.delay;
@@ -144,7 +144,7 @@ namespace Physics
                 }
 
                 // real update
-                if (H.real > 0)
+                if (H.real >= 0)
                 {
                     // Dt calculate TODO
                     RealDt = window.delay;
