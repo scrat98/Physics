@@ -17,6 +17,7 @@ namespace Physics
         public double real { get; set; }
         private LineSeries theoryData, realData;
         private PlotModel model;
+        private Tracker tracker;
 
         public ChartData(string title, string x_name, string y_name)
         {
@@ -35,34 +36,8 @@ namespace Physics
             model.LegendPosition = LegendPosition.TopCenter;
             model.LegendOrientation = LegendOrientation.Horizontal;
             model.Title = title;
-            
-            var la = new LineAnnotation { Type = LineAnnotationType.Vertical, X = 4 };
-            la.MouseDown += (s, e) =>
-            {
-                if (e.ChangedButton != OxyMouseButton.Left)
-                {
-                    return;
-                }
 
-                la.StrokeThickness *= 5;
-                model.InvalidatePlot(false);
-                e.Handled = true;
-            };
-
-            // Handle mouse movements (note: this is only called when the mousedown event was handled)
-            la.MouseMove += (s, e) =>
-            {
-                la.X = la.InverseTransform(e.Position).X;
-                model.InvalidatePlot(false);
-                e.Handled = true;
-            };
-            la.MouseUp += (s, e) =>
-            {
-                la.StrokeThickness /= 5;
-                model.InvalidatePlot(false);
-                e.Handled = true;
-            };
-            model.Annotations.Add(la);
+            tracker = new Tracker(model, x_name, y_name);
 
             model.Axes.Add(new LinearAxis
             {
@@ -106,6 +81,11 @@ namespace Physics
             model.Series.Add(theoryData);
             model.Series.Add(realData);
             return model;
+        }
+
+        public void NewX(double new_x)
+        {
+            tracker.NewX(new_x);
         }
     }
 }

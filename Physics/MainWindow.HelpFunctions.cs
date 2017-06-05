@@ -52,30 +52,39 @@ namespace Physics
         {
             HeightPlot.Model = charts.H.GetModel();
             HeightPlot.Model.InvalidatePlot(true);
+            charts.H.NewX(0);
 
             SPlot.Model = charts.S.GetModel();
             SPlot.Model.InvalidatePlot(true);
+            charts.S.NewX(0);
 
             VPlot.Model = charts.V.GetModel();
             VPlot.Model.InvalidatePlot(true);
+            charts.V.NewX(0);
 
             VxPlot.Model = charts.Vx.GetModel();
             VxPlot.Model.InvalidatePlot(true);
+            charts.Vx.NewX(0);
 
             VyPlot.Model = charts.Vy.GetModel();
             VyPlot.Model.InvalidatePlot(true);
+            charts.Vy.NewX(0);
 
             APlot.Model = charts.A.GetModel();
             APlot.Model.InvalidatePlot(true);
+            charts.A.NewX(0);
 
             AxPlot.Model = charts.Ax.GetModel();
             AxPlot.Model.InvalidatePlot(true);
+            charts.Ax.NewX(0);
 
             AyPlot.Model = charts.Ay.GetModel();
             AyPlot.Model.InvalidatePlot(true);
+            charts.Ay.NewX(0);
 
             GlobalPlot.Model = charts.Global.GetModel();
             GlobalPlot.Model.InvalidatePlot(true);
+            charts.Global.NewX(0);
         }
 
         public void Log()
