@@ -69,7 +69,8 @@ namespace Physics
                 MajorGridlineStyle = LineStyle.Solid,
                 MinorGridlineStyle = LineStyle.Dot,
                 Position = AxisPosition.Bottom,
-                Title = x_name
+                Title = x_name,
+                AbsoluteMinimum = 0
             });
             model.Axes.Add(new LinearAxis
             {
