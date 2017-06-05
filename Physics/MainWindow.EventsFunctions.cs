@@ -85,7 +85,7 @@ namespace Physics
                 Log();
                 return;
             }
-            if (arguments.k.value > 0) okInput(KInput, arguments.k);
+            if (arguments.k.value >= 0) okInput(KInput, arguments.k);
             else errorInput(KInput, arguments.k);
 
             charts.Draw();
@@ -99,7 +99,7 @@ namespace Physics
                 Log();
                 return;
             }
-            if (arguments.p.value > 0) okInput(PInput, arguments.p);
+            if (arguments.p.value >= 0) okInput(PInput, arguments.p);
             else errorInput(PInput, arguments.p);
 
             charts.Draw();
@@ -122,46 +122,55 @@ namespace Physics
         private void MercuryG_Click(object sender, EventArgs e)
         {
             gInput.Text = "3,72";
+            PInput.Text = "0";
         }
 
         private void VenusG_Click(object sender, EventArgs e)
         {
             gInput.Text = "8,87";
+            PInput.Text = "67";
         }
 
         private void EarthG_Click(object sender, EventArgs e)
         {
             gInput.Text = "9,77";
+            PInput.Text = "1,247";
         }
 
         private void MarsG_Click(object sender, EventArgs e)
         {
             gInput.Text = "3,69";
+            PInput.Text = "0,002";
         }
 
         private void JupiterG_Click(object sender, EventArgs e)
         {
             gInput.Text = "20,87";
+            PInput.Text = "5,2";
         }
 
         private void SaturnG_Click(object sender, EventArgs e)
         {
             gInput.Text = "7,21";
+            PInput.Text = "0,07";
         }
 
         private void UranusG_Click(object sender, EventArgs e)
         {
             gInput.Text = "8,43";
+            PInput.Text = "296,55";
         }
 
         private void NeptuneG_Click(object sender, EventArgs e)
         {
             gInput.Text = "10,71";
+            PInput.Text = "0,06";
         }
 
         private void PlutoG_Click(object sender, EventArgs e)
         {
             gInput.Text = "0,81";
+            PInput.Text = "0";
         }
     }
 }
