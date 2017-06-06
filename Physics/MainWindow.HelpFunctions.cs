@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 using OxyPlot;
 using OxyPlot.Series;
@@ -84,7 +88,75 @@ namespace Physics
 
             GlobalPlot.Model = charts.Global.GetModel();
             GlobalPlot.Model.InvalidatePlot(true);
-            charts.Global.NewX(0);
+        }
+
+        private void PlotTabs_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            switch (curTabInd)
+            {
+                case 1:
+                    charts.GlobalPoint = charts.H.tracker.point;
+                    charts.GlobalX = charts.H.tracker.X;
+                    break;
+                case 2:
+                    charts.GlobalPoint = charts.S.tracker.point;
+                    charts.GlobalX = charts.S.tracker.X;
+                    break;
+                case 3:
+                    charts.GlobalPoint = charts.V.tracker.point;
+                    charts.GlobalX = charts.V.tracker.X;
+                    break;
+                case 4:
+                    charts.GlobalPoint = charts.Vx.tracker.point;
+                    charts.GlobalX = charts.Vx.tracker.X;
+                    break;
+                case 5:
+                    charts.GlobalPoint = charts.Vy.tracker.point;
+                    charts.GlobalX = charts.Vy.tracker.X;
+                    break;
+                case 6:
+                    charts.GlobalPoint = charts.A.tracker.point;
+                    charts.GlobalX = charts.A.tracker.X;
+                    break;
+                case 7:
+                    charts.GlobalPoint = charts.Ax.tracker.point;
+                    charts.GlobalX = charts.Ax.tracker.X;
+                    break;
+                case 8:
+                    charts.GlobalPoint = charts.Ay.tracker.point;
+                    charts.GlobalX = charts.Ay.tracker.X;
+                    break;
+            }
+
+            switch (e.TabPageIndex)
+            {
+                case 1:
+                    charts.H.NewX(charts.GlobalX, charts.GlobalPoint);
+                    break;
+                case 2:
+                    charts.S.NewX(charts.GlobalX, charts.GlobalPoint);
+                    break;
+                case 3:
+                    charts.V.NewX(charts.GlobalX, charts.GlobalPoint);
+                    break;
+                case 4:
+                    charts.Vx.NewX(charts.GlobalX, charts.GlobalPoint);
+                    break;
+                case 5:
+                    charts.Vy.NewX(charts.GlobalX, charts.GlobalPoint);
+                    break;
+                case 6:
+                    charts.A.NewX(charts.GlobalX, charts.GlobalPoint);
+                    break;
+                case 7:
+                    charts.Ax.NewX(charts.GlobalX, charts.GlobalPoint);
+                    break;
+                case 8:
+                    charts.Ay.NewX(charts.GlobalX, charts.GlobalPoint);
+                    break;
+            }
+
+            curTabInd = e.TabPageIndex;
         }
 
         public void Log()

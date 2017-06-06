@@ -17,9 +17,9 @@ namespace Physics
         public double real { get; set; }
         private LineSeries theoryData, realData;
         private PlotModel model;
-        private Tracker tracker;
+        public Tracker tracker { get; private set; }
 
-        public ChartData(string title, string x_name, string y_name)
+        public ChartData(string title, string x_name, string y_name, bool tracked = true)
         {
             theory = 0;
             theoryData = new LineSeries();
@@ -37,7 +37,7 @@ namespace Physics
             model.LegendOrientation = LegendOrientation.Horizontal;
             model.Title = title;
 
-            tracker = new Tracker(model, x_name, y_name);
+            if(tracked) tracker = new Tracker(model, x_name, y_name);
 
             model.Axes.Add(new LinearAxis
             {
@@ -86,6 +86,11 @@ namespace Physics
         public void NewX(double new_x)
         {
             tracker.NewX(new_x);
+        }
+
+        public void NewX(double new_x, int _point)
+        {
+            tracker.NewX(new_x, _point);
         }
     }
 }

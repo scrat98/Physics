@@ -125,7 +125,7 @@
             this.InputContainer.Controls.Add(this.PlanetContainer3, 2, 2);
             this.InputContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InputContainer.Location = new System.Drawing.Point(2, 2);
-            this.InputContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.InputContainer.Margin = new System.Windows.Forms.Padding(2);
             this.InputContainer.Name = "InputContainer";
             this.InputContainer.RowCount = 3;
             this.InputContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -143,7 +143,7 @@
             this.AngContainer.Controls.Add(this.AngInput, 1, 0);
             this.AngContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AngContainer.Location = new System.Drawing.Point(551, 2);
-            this.AngContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AngContainer.Margin = new System.Windows.Forms.Padding(2);
             this.AngContainer.Name = "AngContainer";
             this.AngContainer.RowCount = 1;
             this.AngContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -169,10 +169,10 @@
             // 
             // 
             this.AngInput.CustomButton.Image = null;
-            this.AngInput.CustomButton.Location = new System.Drawing.Point(80, 2);
-            this.AngInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AngInput.CustomButton.Location = new System.Drawing.Point(52, 2);
+            this.AngInput.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.AngInput.CustomButton.Name = "";
-            this.AngInput.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.AngInput.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.AngInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.AngInput.CustomButton.TabIndex = 1;
             this.AngInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -182,7 +182,7 @@
             this.AngInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.AngInput.Lines = new string[0];
             this.AngInput.Location = new System.Drawing.Point(97, 2);
-            this.AngInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AngInput.Margin = new System.Windows.Forms.Padding(2);
             this.AngInput.MaxLength = 32767;
             this.AngInput.Name = "AngInput";
             this.AngInput.PasswordChar = '\0';
@@ -208,7 +208,7 @@
             this.MassContainer.Controls.Add(this.MassInput, 1, 0);
             this.MassContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MassContainer.Location = new System.Drawing.Point(2, 2);
-            this.MassContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MassContainer.Margin = new System.Windows.Forms.Padding(2);
             this.MassContainer.Name = "MassContainer";
             this.MassContainer.RowCount = 1;
             this.MassContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -235,10 +235,10 @@
             // 
             // 
             this.MassInput.CustomButton.Image = null;
-            this.MassInput.CustomButton.Location = new System.Drawing.Point(78, 2);
-            this.MassInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MassInput.CustomButton.Location = new System.Drawing.Point(55, 2);
+            this.MassInput.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.MassInput.CustomButton.Name = "";
-            this.MassInput.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.MassInput.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.MassInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.MassInput.CustomButton.TabIndex = 1;
             this.MassInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -249,7 +249,7 @@
             this.MassInput.ForeColor = System.Drawing.Color.Black;
             this.MassInput.Lines = new string[0];
             this.MassInput.Location = new System.Drawing.Point(92, 2);
-            this.MassInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MassInput.Margin = new System.Windows.Forms.Padding(2);
             this.MassInput.MaxLength = 32767;
             this.MassInput.Name = "MassInput";
             this.MassInput.PasswordChar = '\0';
@@ -275,7 +275,7 @@
             this.VelContainer.Controls.Add(this.VelInput, 1, 0);
             this.VelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VelContainer.Location = new System.Drawing.Point(368, 2);
-            this.VelContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.VelContainer.Name = "VelContainer";
             this.VelContainer.RowCount = 1;
             this.VelContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -301,10 +301,10 @@
             // 
             // 
             this.VelInput.CustomButton.Image = null;
-            this.VelInput.CustomButton.Location = new System.Drawing.Point(78, 2);
-            this.VelInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VelInput.CustomButton.Location = new System.Drawing.Point(55, 2);
+            this.VelInput.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.VelInput.CustomButton.Name = "";
-            this.VelInput.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.VelInput.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.VelInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.VelInput.CustomButton.TabIndex = 1;
             this.VelInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -314,7 +314,7 @@
             this.VelInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.VelInput.Lines = new string[0];
             this.VelInput.Location = new System.Drawing.Point(92, 2);
-            this.VelInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VelInput.Margin = new System.Windows.Forms.Padding(2);
             this.VelInput.MaxLength = 32767;
             this.VelInput.Name = "VelInput";
             this.VelInput.PasswordChar = '\0';
@@ -340,7 +340,7 @@
             this.HeightContainer.Controls.Add(this.HeightInput, 1, 0);
             this.HeightContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HeightContainer.Location = new System.Drawing.Point(185, 2);
-            this.HeightContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HeightContainer.Margin = new System.Windows.Forms.Padding(2);
             this.HeightContainer.Name = "HeightContainer";
             this.HeightContainer.RowCount = 1;
             this.HeightContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -366,10 +366,10 @@
             // 
             // 
             this.HeightInput.CustomButton.Image = null;
-            this.HeightInput.CustomButton.Location = new System.Drawing.Point(78, 2);
-            this.HeightInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HeightInput.CustomButton.Location = new System.Drawing.Point(55, 2);
+            this.HeightInput.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.HeightInput.CustomButton.Name = "";
-            this.HeightInput.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.HeightInput.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.HeightInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.HeightInput.CustomButton.TabIndex = 1;
             this.HeightInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -379,7 +379,7 @@
             this.HeightInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.HeightInput.Lines = new string[0];
             this.HeightInput.Location = new System.Drawing.Point(92, 2);
-            this.HeightInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HeightInput.Margin = new System.Windows.Forms.Padding(2);
             this.HeightInput.MaxLength = 32767;
             this.HeightInput.Name = "HeightInput";
             this.HeightInput.PasswordChar = '\0';
@@ -405,7 +405,7 @@
             this.gContainer.Controls.Add(this.gInput, 1, 0);
             this.gContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gContainer.Location = new System.Drawing.Point(2, 42);
-            this.gContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gContainer.Margin = new System.Windows.Forms.Padding(2);
             this.gContainer.Name = "gContainer";
             this.gContainer.RowCount = 1;
             this.gContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -431,10 +431,10 @@
             // 
             // 
             this.gInput.CustomButton.Image = null;
-            this.gInput.CustomButton.Location = new System.Drawing.Point(78, 2);
-            this.gInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gInput.CustomButton.Location = new System.Drawing.Point(55, 2);
+            this.gInput.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.gInput.CustomButton.Name = "";
-            this.gInput.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.gInput.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.gInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.gInput.CustomButton.TabIndex = 1;
             this.gInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -444,7 +444,7 @@
             this.gInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.gInput.Lines = new string[0];
             this.gInput.Location = new System.Drawing.Point(92, 2);
-            this.gInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gInput.Margin = new System.Windows.Forms.Padding(2);
             this.gInput.MaxLength = 32767;
             this.gInput.Name = "gInput";
             this.gInput.PasswordChar = '\0';
@@ -471,7 +471,7 @@
             this.PContainer.Controls.Add(this.PInput, 1, 0);
             this.PContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PContainer.Location = new System.Drawing.Point(185, 42);
-            this.PContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PContainer.Margin = new System.Windows.Forms.Padding(2);
             this.PContainer.Name = "PContainer";
             this.PContainer.RowCount = 1;
             this.PContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -497,10 +497,10 @@
             // 
             // 
             this.PInput.CustomButton.Image = null;
-            this.PInput.CustomButton.Location = new System.Drawing.Point(78, 2);
-            this.PInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PInput.CustomButton.Location = new System.Drawing.Point(55, 2);
+            this.PInput.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.PInput.CustomButton.Name = "";
-            this.PInput.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.PInput.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.PInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.PInput.CustomButton.TabIndex = 1;
             this.PInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -510,7 +510,7 @@
             this.PInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.PInput.Lines = new string[0];
             this.PInput.Location = new System.Drawing.Point(92, 2);
-            this.PInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PInput.Margin = new System.Windows.Forms.Padding(2);
             this.PInput.MaxLength = 32767;
             this.PInput.Name = "PInput";
             this.PInput.PasswordChar = '\0';
@@ -537,7 +537,7 @@
             this.KContainer.Controls.Add(this.KInput, 1, 0);
             this.KContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.KContainer.Location = new System.Drawing.Point(368, 42);
-            this.KContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KContainer.Margin = new System.Windows.Forms.Padding(2);
             this.KContainer.Name = "KContainer";
             this.KContainer.RowCount = 1;
             this.KContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -563,10 +563,10 @@
             // 
             // 
             this.KInput.CustomButton.Image = null;
-            this.KInput.CustomButton.Location = new System.Drawing.Point(78, 2);
-            this.KInput.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KInput.CustomButton.Location = new System.Drawing.Point(55, 2);
+            this.KInput.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.KInput.CustomButton.Name = "";
-            this.KInput.CustomButton.Size = new System.Drawing.Size(19, 19);
+            this.KInput.CustomButton.Size = new System.Drawing.Size(27, 27);
             this.KInput.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.KInput.CustomButton.TabIndex = 1;
             this.KInput.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -576,7 +576,7 @@
             this.KInput.FontSize = MetroFramework.MetroTextBoxSize.Tall;
             this.KInput.Lines = new string[0];
             this.KInput.Location = new System.Drawing.Point(92, 2);
-            this.KInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.KInput.Margin = new System.Windows.Forms.Padding(2);
             this.KInput.MaxLength = 32767;
             this.KInput.Name = "KInput";
             this.KInput.PasswordChar = '\0';
@@ -763,13 +763,13 @@
             this.WindowContainer.Controls.Add(this.InputContainer, 0, 0);
             this.WindowContainer.Controls.Add(this.PlotTabs, 0, 1);
             this.WindowContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WindowContainer.Location = new System.Drawing.Point(15, 24);
-            this.WindowContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.WindowContainer.Location = new System.Drawing.Point(15, 30);
+            this.WindowContainer.Margin = new System.Windows.Forms.Padding(2);
             this.WindowContainer.Name = "WindowContainer";
             this.WindowContainer.RowCount = 2;
             this.WindowContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 160F));
             this.WindowContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.WindowContainer.Size = new System.Drawing.Size(738, 584);
+            this.WindowContainer.Size = new System.Drawing.Size(738, 578);
             this.WindowContainer.TabIndex = 1;
             // 
             // PlotTabs
@@ -786,13 +786,14 @@
             this.PlotTabs.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PlotTabs.FontSize = MetroFramework.MetroTabControlSize.Tall;
             this.PlotTabs.Location = new System.Drawing.Point(2, 162);
-            this.PlotTabs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PlotTabs.Margin = new System.Windows.Forms.Padding(2);
             this.PlotTabs.Name = "PlotTabs";
-            this.PlotTabs.SelectedIndex = 8;
-            this.PlotTabs.Size = new System.Drawing.Size(734, 420);
+            this.PlotTabs.SelectedIndex = 0;
+            this.PlotTabs.Size = new System.Drawing.Size(734, 414);
             this.PlotTabs.TabIndex = 1;
             this.PlotTabs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.PlotTabs.UseSelectable = true;
+            this.PlotTabs.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.PlotTabs_Selecting);
             // 
             // GlobalTab
             // 
@@ -801,9 +802,9 @@
             this.GlobalTab.HorizontalScrollbarHighlightOnWheel = false;
             this.GlobalTab.HorizontalScrollbarSize = 8;
             this.GlobalTab.Location = new System.Drawing.Point(4, 44);
-            this.GlobalTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GlobalTab.Margin = new System.Windows.Forms.Padding(2);
             this.GlobalTab.Name = "GlobalTab";
-            this.GlobalTab.Size = new System.Drawing.Size(726, 402);
+            this.GlobalTab.Size = new System.Drawing.Size(726, 366);
             this.GlobalTab.TabIndex = 10;
             this.GlobalTab.Text = "H(S)";
             this.GlobalTab.VerticalScrollbarBarColor = true;
@@ -814,10 +815,10 @@
             // 
             this.GlobalPlot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GlobalPlot.Location = new System.Drawing.Point(0, 0);
-            this.GlobalPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GlobalPlot.Margin = new System.Windows.Forms.Padding(2);
             this.GlobalPlot.Name = "GlobalPlot";
             this.GlobalPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.GlobalPlot.Size = new System.Drawing.Size(726, 402);
+            this.GlobalPlot.Size = new System.Drawing.Size(726, 366);
             this.GlobalPlot.TabIndex = 2;
             this.GlobalPlot.Text = "plotView1";
             this.GlobalPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
@@ -831,10 +832,10 @@
             this.HeightPage.HorizontalScrollbarHighlightOnWheel = false;
             this.HeightPage.HorizontalScrollbarSize = 8;
             this.HeightPage.Location = new System.Drawing.Point(4, 44);
-            this.HeightPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HeightPage.Margin = new System.Windows.Forms.Padding(2);
             this.HeightPage.Name = "HeightPage";
-            this.HeightPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.HeightPage.Size = new System.Drawing.Size(726, 402);
+            this.HeightPage.Padding = new System.Windows.Forms.Padding(2);
+            this.HeightPage.Size = new System.Drawing.Size(726, 366);
             this.HeightPage.TabIndex = 2;
             this.HeightPage.Text = "H(t)";
             this.HeightPage.UseVisualStyleBackColor = true;
@@ -846,10 +847,10 @@
             // 
             this.HeightPlot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HeightPlot.Location = new System.Drawing.Point(2, 2);
-            this.HeightPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.HeightPlot.Margin = new System.Windows.Forms.Padding(2);
             this.HeightPlot.Name = "HeightPlot";
             this.HeightPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.HeightPlot.Size = new System.Drawing.Size(722, 398);
+            this.HeightPlot.Size = new System.Drawing.Size(722, 362);
             this.HeightPlot.TabIndex = 0;
             this.HeightPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.HeightPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -862,10 +863,10 @@
             this.STab.HorizontalScrollbarHighlightOnWheel = false;
             this.STab.HorizontalScrollbarSize = 8;
             this.STab.Location = new System.Drawing.Point(4, 44);
-            this.STab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.STab.Margin = new System.Windows.Forms.Padding(2);
             this.STab.Name = "STab";
-            this.STab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.STab.Size = new System.Drawing.Size(726, 402);
+            this.STab.Padding = new System.Windows.Forms.Padding(2);
+            this.STab.Size = new System.Drawing.Size(726, 372);
             this.STab.TabIndex = 3;
             this.STab.Text = "S(t)";
             this.STab.UseVisualStyleBackColor = true;
@@ -877,10 +878,10 @@
             // 
             this.SPlot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SPlot.Location = new System.Drawing.Point(2, 2);
-            this.SPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SPlot.Margin = new System.Windows.Forms.Padding(2);
             this.SPlot.Name = "SPlot";
             this.SPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.SPlot.Size = new System.Drawing.Size(722, 398);
+            this.SPlot.Size = new System.Drawing.Size(722, 368);
             this.SPlot.TabIndex = 0;
             this.SPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.SPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -893,10 +894,10 @@
             this.VTab.HorizontalScrollbarHighlightOnWheel = false;
             this.VTab.HorizontalScrollbarSize = 8;
             this.VTab.Location = new System.Drawing.Point(4, 44);
-            this.VTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VTab.Margin = new System.Windows.Forms.Padding(2);
             this.VTab.Name = "VTab";
-            this.VTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.VTab.Size = new System.Drawing.Size(726, 402);
+            this.VTab.Padding = new System.Windows.Forms.Padding(2);
+            this.VTab.Size = new System.Drawing.Size(726, 372);
             this.VTab.TabIndex = 4;
             this.VTab.Text = "V(t)";
             this.VTab.UseVisualStyleBackColor = true;
@@ -908,10 +909,10 @@
             // 
             this.VPlot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VPlot.Location = new System.Drawing.Point(2, 2);
-            this.VPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VPlot.Margin = new System.Windows.Forms.Padding(2);
             this.VPlot.Name = "VPlot";
             this.VPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VPlot.Size = new System.Drawing.Size(722, 398);
+            this.VPlot.Size = new System.Drawing.Size(722, 368);
             this.VPlot.TabIndex = 0;
             this.VPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -924,10 +925,10 @@
             this.VxTab.HorizontalScrollbarHighlightOnWheel = false;
             this.VxTab.HorizontalScrollbarSize = 8;
             this.VxTab.Location = new System.Drawing.Point(4, 44);
-            this.VxTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VxTab.Margin = new System.Windows.Forms.Padding(2);
             this.VxTab.Name = "VxTab";
-            this.VxTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.VxTab.Size = new System.Drawing.Size(726, 402);
+            this.VxTab.Padding = new System.Windows.Forms.Padding(2);
+            this.VxTab.Size = new System.Drawing.Size(726, 372);
             this.VxTab.TabIndex = 5;
             this.VxTab.Text = "Vx(t)";
             this.VxTab.UseVisualStyleBackColor = true;
@@ -939,10 +940,10 @@
             // 
             this.VxPlot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VxPlot.Location = new System.Drawing.Point(2, 2);
-            this.VxPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VxPlot.Margin = new System.Windows.Forms.Padding(2);
             this.VxPlot.Name = "VxPlot";
             this.VxPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VxPlot.Size = new System.Drawing.Size(722, 398);
+            this.VxPlot.Size = new System.Drawing.Size(722, 368);
             this.VxPlot.TabIndex = 0;
             this.VxPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VxPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -955,10 +956,10 @@
             this.VyTab.HorizontalScrollbarHighlightOnWheel = false;
             this.VyTab.HorizontalScrollbarSize = 8;
             this.VyTab.Location = new System.Drawing.Point(4, 44);
-            this.VyTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VyTab.Margin = new System.Windows.Forms.Padding(2);
             this.VyTab.Name = "VyTab";
-            this.VyTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.VyTab.Size = new System.Drawing.Size(726, 402);
+            this.VyTab.Padding = new System.Windows.Forms.Padding(2);
+            this.VyTab.Size = new System.Drawing.Size(726, 372);
             this.VyTab.TabIndex = 6;
             this.VyTab.Text = "Vy(t)";
             this.VyTab.UseVisualStyleBackColor = true;
@@ -970,10 +971,10 @@
             // 
             this.VyPlot.Dock = System.Windows.Forms.DockStyle.Fill;
             this.VyPlot.Location = new System.Drawing.Point(2, 2);
-            this.VyPlot.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.VyPlot.Margin = new System.Windows.Forms.Padding(2);
             this.VyPlot.Name = "VyPlot";
             this.VyPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VyPlot.Size = new System.Drawing.Size(722, 398);
+            this.VyPlot.Size = new System.Drawing.Size(722, 368);
             this.VyPlot.TabIndex = 0;
             this.VyPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -986,10 +987,10 @@
             this.ATab.HorizontalScrollbarHighlightOnWheel = false;
             this.ATab.HorizontalScrollbarSize = 8;
             this.ATab.Location = new System.Drawing.Point(4, 44);
-            this.ATab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ATab.Margin = new System.Windows.Forms.Padding(2);
             this.ATab.Name = "ATab";
-            this.ATab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ATab.Size = new System.Drawing.Size(726, 402);
+            this.ATab.Padding = new System.Windows.Forms.Padding(2);
+            this.ATab.Size = new System.Drawing.Size(726, 372);
             this.ATab.TabIndex = 7;
             this.ATab.Text = "A(t)";
             this.ATab.UseVisualStyleBackColor = true;
@@ -1003,7 +1004,7 @@
             this.APlot.Location = new System.Drawing.Point(2, 2);
             this.APlot.Name = "APlot";
             this.APlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.APlot.Size = new System.Drawing.Size(722, 398);
+            this.APlot.Size = new System.Drawing.Size(722, 368);
             this.APlot.TabIndex = 0;
             this.APlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.APlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1016,10 +1017,10 @@
             this.AxTab.HorizontalScrollbarHighlightOnWheel = false;
             this.AxTab.HorizontalScrollbarSize = 8;
             this.AxTab.Location = new System.Drawing.Point(4, 44);
-            this.AxTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AxTab.Margin = new System.Windows.Forms.Padding(2);
             this.AxTab.Name = "AxTab";
-            this.AxTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.AxTab.Size = new System.Drawing.Size(726, 402);
+            this.AxTab.Padding = new System.Windows.Forms.Padding(2);
+            this.AxTab.Size = new System.Drawing.Size(726, 372);
             this.AxTab.TabIndex = 8;
             this.AxTab.Text = "Ax(t)";
             this.AxTab.UseVisualStyleBackColor = true;
@@ -1033,7 +1034,7 @@
             this.AxPlot.Location = new System.Drawing.Point(2, 2);
             this.AxPlot.Name = "AxPlot";
             this.AxPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.AxPlot.Size = new System.Drawing.Size(722, 398);
+            this.AxPlot.Size = new System.Drawing.Size(722, 368);
             this.AxPlot.TabIndex = 0;
             this.AxPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.AxPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1046,10 +1047,10 @@
             this.AyTab.HorizontalScrollbarHighlightOnWheel = false;
             this.AyTab.HorizontalScrollbarSize = 8;
             this.AyTab.Location = new System.Drawing.Point(4, 44);
-            this.AyTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AyTab.Margin = new System.Windows.Forms.Padding(2);
             this.AyTab.Name = "AyTab";
-            this.AyTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.AyTab.Size = new System.Drawing.Size(726, 372);
+            this.AyTab.Padding = new System.Windows.Forms.Padding(2);
+            this.AyTab.Size = new System.Drawing.Size(726, 366);
             this.AyTab.TabIndex = 9;
             this.AyTab.Text = "Ay(t)";
             this.AyTab.UseVisualStyleBackColor = true;
@@ -1063,7 +1064,7 @@
             this.AyPlot.Location = new System.Drawing.Point(2, 2);
             this.AyPlot.Name = "AyPlot";
             this.AyPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.AyPlot.Size = new System.Drawing.Size(722, 368);
+            this.AyPlot.Size = new System.Drawing.Size(722, 362);
             this.AyPlot.TabIndex = 0;
             this.AyPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.AyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1077,10 +1078,10 @@
             this.ClientSize = new System.Drawing.Size(768, 624);
             this.Controls.Add(this.WindowContainer);
             this.DisplayHeader = false;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(600, 488);
             this.Name = "MainWindow";
-            this.Padding = new System.Windows.Forms.Padding(15, 24, 15, 16);
+            this.Padding = new System.Windows.Forms.Padding(15, 30, 15, 16);
             this.Text = "Physics";
             this.InputContainer.ResumeLayout(false);
             this.AngContainer.ResumeLayout(false);

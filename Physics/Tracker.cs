@@ -18,6 +18,9 @@ namespace Physics
         private LineAnnotation RealLine;
         private LineAnnotation TheoryLine;
 
+        public int point { get; set; }
+        public double X { get; set; }
+
         string MainLine_name;
         string AddLine_name;
 
@@ -43,7 +46,9 @@ namespace Physics
                 Type = LineAnnotationType.Vertical,
                 TextOrientation = AnnotationTextOrientation.Horizontal,
                 TextHorizontalAlignment = HorizontalAlignment.Left,
-                TextVerticalAlignment = VerticalAlignment.Middle,
+                TextVerticalAlignment = VerticalAlignment.Bottom,
+                Color = OxyColors.Blue,
+                TextLinePosition = 0,
                 TextPadding = 8
             };
 
@@ -80,9 +85,11 @@ namespace Physics
                 Type = LineAnnotationType.Horizontal,
                 TextOrientation = AnnotationTextOrientation.Horizontal,
                 Color = OxyColors.Brown,
+                TextColor = OxyColors.Brown,
+                TextLinePosition = 1,
                 TextPadding = 8,
                 TextHorizontalAlignment = HorizontalAlignment.Right,
-                TextVerticalAlignment = VerticalAlignment.Bottom,
+                TextVerticalAlignment = VerticalAlignment.Bottom
             };
         }
 
@@ -92,49 +99,63 @@ namespace Physics
             {
                 Type = LineAnnotationType.Horizontal,
                 TextOrientation = AnnotationTextOrientation.Horizontal,
-                Color = OxyColors.Gold,
+                Color = OxyColors.Red,
+                TextColor = OxyColors.Red,
+                TextLinePosition = 0,
                 TextPadding = 8,
-                TextHorizontalAlignment = HorizontalAlignment.Right,
-                TextVerticalAlignment = VerticalAlignment.Top
+                TextHorizontalAlignment = HorizontalAlignment.Left,
+                TextVerticalAlignment = VerticalAlignment.Bottom
             };
         }
 
-        public void NewX(double _X)
+        public void NewX(double _X, int _point)
         {
+            point = _point;
             LineSeries s1 = model.Series[0] as LineSeries;
             LineSeries s2 = model.Series[1] as LineSeries;
-            int point;
-            if (s1.Points.Count > s2.Points.Count) point = getNearestPoint(_X, s1);
-            else point = getNearestPoint(_X, s2);
+            LineSeries s;
+            if (s1.Points.Count > s2.Points.Count) s = s1;
+            else s = s2;
 
             model.Annotations.Clear();
-
-            if (point < s1.Points.Count)
+            if (point < s.Points.Count)
             {
-                MainLine.X = s1.Points[point].X;
+                MainLine.X = s.Points[point].X;
             }
             else
             {
                 MainLine.X = _X;
             }
-            MainLine.Text = MainLine_name + ' ' + MainLine.X;
+            X = MainLine.X;
+            MainLine.Text = MainLine_name + ' ' + Math.Round(MainLine.X, 3);
             model.Annotations.Add(MainLine);
 
             if (point < s1.Points.Count)
             {
                 TheoryLine.Y = s1.Points[point].Y;
-                TheoryLine.Text = "Theory " + AddLine_name + ' ' + TheoryLine.Y;
+                TheoryLine.Text = "Theory " + AddLine_name + ' ' + Math.Round(TheoryLine.Y, 3);
                 model.Annotations.Add(TheoryLine);
             }
 
             if (point < s2.Points.Count)
             {
                 RealLine.Y = s2.Points[point].Y;
-                RealLine.Text = "Real " + AddLine_name + ' ' + RealLine.Y;
+                RealLine.Text = "Real " + AddLine_name + ' ' + Math.Round(RealLine.Y, 3);
                 model.Annotations.Add(RealLine);
             }
 
             model.InvalidatePlot(true);
+        }
+
+        public void NewX(double _X)
+        {
+            LineSeries s1 = model.Series[0] as LineSeries;
+            LineSeries s2 = model.Series[1] as LineSeries;
+
+            if (s1.Points.Count > s2.Points.Count) point = getNearestPoint(_X, s1);
+            else point = getNearestPoint(_X, s2);
+
+            NewX(_X, point);
         }
 
         public int getNearestPoint(double x, LineSeries seria)
@@ -142,19 +163,19 @@ namespace Physics
             if (x > seria.Points[seria.Points.Count - 1].X) return seria.Points.Count;
 
             double different = Double.MaxValue;
-            int best = 0;
+            int point = 0;
 
             for (int i = 0; i < seria.Points.Count; i++)
             {
-                if (x - seria.Points[i].X < different && seria.Points[i].X <= x)
+                if (Math.Abs(x - seria.Points[i].X) < different)
                 {
-                    different = x - seria.Points[i].X;
-                    best = i;
+                    different = Math.Abs(x - seria.Points[i].X);
+                    point = i;
                 }
                 else break;
             }
 
-            return best;
+            return point;
         }
     }
 }

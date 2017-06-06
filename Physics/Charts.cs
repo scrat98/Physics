@@ -25,6 +25,9 @@ namespace Physics
         public ChartData A { get; }
         public ChartData Global { get; }
 
+        public int GlobalPoint { get; set; }
+        public double GlobalX { get; set; }
+
         public Charts(MainWindow _window)
         {
             window = _window;
@@ -37,7 +40,7 @@ namespace Physics
             Ax = new ChartData("Ax(t)", "t, sec", "Accelerate, m/s\xB2");
             Ay = new ChartData("Ay(t)", "t, sec", "Accelerate, m/s\xB2");
             A = new ChartData("A(t)", "t, sec", "Accelerate, m/s\xB2");
-            Global = new ChartData("H(S)", "Distance, m", "Height, m");
+            Global = new ChartData("H(S)", "Distance, m", "Height, m", false);
         }
 
         private void VelocityInit()

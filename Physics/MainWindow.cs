@@ -27,6 +27,8 @@ namespace Physics
         public Arguments arguments { get; set; }
         public Charts charts { get; set; }
 
+        private int curTabInd = 0;
+
         public MainWindow()
         {
             InitializeComponent();
