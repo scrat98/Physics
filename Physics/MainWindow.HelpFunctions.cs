@@ -56,38 +56,58 @@ namespace Physics
         {
             HeightPlot.Model = charts.H.GetModel();
             HeightPlot.Model.InvalidatePlot(true);
-            charts.H.NewX(0);
+            charts.H.NewX(0, charts.RealHMax);
 
             SPlot.Model = charts.S.GetModel();
             SPlot.Model.InvalidatePlot(true);
-            charts.S.NewX(0);
+            charts.S.NewX(0, charts.RealHMax);
 
             VPlot.Model = charts.V.GetModel();
             VPlot.Model.InvalidatePlot(true);
-            charts.V.NewX(0);
+            charts.V.NewX(0, charts.RealHMax);
 
             VxPlot.Model = charts.Vx.GetModel();
             VxPlot.Model.InvalidatePlot(true);
-            charts.Vx.NewX(0);
+            charts.Vx.NewX(0, charts.RealHMax);
 
             VyPlot.Model = charts.Vy.GetModel();
             VyPlot.Model.InvalidatePlot(true);
-            charts.Vy.NewX(0);
+            charts.Vy.NewX(0, charts.RealHMax);
 
             APlot.Model = charts.A.GetModel();
             APlot.Model.InvalidatePlot(true);
-            charts.A.NewX(0);
+            charts.A.NewX(0, charts.RealHMax);
 
             AxPlot.Model = charts.Ax.GetModel();
             AxPlot.Model.InvalidatePlot(true);
-            charts.Ax.NewX(0);
+            charts.Ax.NewX(0, charts.RealHMax);
 
             AyPlot.Model = charts.Ay.GetModel();
             AyPlot.Model.InvalidatePlot(true);
-            charts.Ay.NewX(0);
+            charts.Ay.NewX(0, charts.RealHMax);
 
             GlobalPlot.Model = charts.Global.GetModel();
             GlobalPlot.Model.InvalidatePlot(true);
+
+            charts.GlobalPoint = charts.H.tracker.point;
+            charts.GlobalX = charts.H.tracker.X;
+            charts.minX = HeightPlot.Model.Axes[0].ActualMinimum;
+            charts.maxX = HeightPlot.Model.Axes[0].ActualMaximum;
+        }
+
+        public void InformationUpdate()
+        {
+            HRealValue.Text = Math.Round(charts.H.realData.Points[charts.RealHMax].Y, 3) + " m";
+            HTheoryValue.Text = Math.Round(charts.H.theoryData.Points[charts.TheoryHMax].Y, 3) + " m";
+
+            RealRiseTimeValue.Text = Math.Round(charts.H.realData.Points[charts.RealHMax].X, 3) + " sec";
+            TheoryRiseTimeValue.Text = Math.Round(charts.H.theoryData.Points[charts.TheoryHMax].X, 3) + " sec";
+
+            SRealValue.Text = Math.Round(charts.S.realData.Points[charts.S.realData.Points.Count - 1].Y, 3) + " m";
+            STheoryValue.Text = Math.Round(charts.S.theoryData.Points[charts.S.theoryData.Points.Count - 1].Y, 3) + " m";
+
+            RealTravelTimeValue.Text = Math.Round(charts.S.realData.Points[charts.S.realData.Points.Count - 1].X, 3) + " sec";
+            TheoryTravelTimeValue.Text = Math.Round(charts.S.theoryData.Points[charts.S.theoryData.Points.Count - 1].X, 3) + " sec";
         }
 
         private void PlotTabs_Selecting(object sender, TabControlCancelEventArgs e)

@@ -62,6 +62,20 @@
             this.PlutoG = new MetroFramework.Controls.MetroButton();
             this.SaturnG = new MetroFramework.Controls.MetroButton();
             this.JupiterG = new MetroFramework.Controls.MetroButton();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.RealRiseTimeValue = new MetroFramework.Controls.MetroLink();
+            this.HRealValue = new MetroFramework.Controls.MetroLabel();
+            this.TravelTimeLabel = new MetroFramework.Controls.MetroLabel();
+            this.SLabel = new MetroFramework.Controls.MetroLabel();
+            this.RiseTimeLabel = new MetroFramework.Controls.MetroLabel();
+            this.HInfolabel = new MetroFramework.Controls.MetroLabel();
+            this.RealLabel = new MetroFramework.Controls.MetroLabel();
+            this.ValuesLabel = new MetroFramework.Controls.MetroLabel();
+            this.TheoryLabel = new MetroFramework.Controls.MetroLabel();
+            this.HTheoryValue = new MetroFramework.Controls.MetroLabel();
+            this.STheoryValue = new MetroFramework.Controls.MetroLabel();
+            this.SRealValue = new MetroFramework.Controls.MetroLabel();
+            this.TheoryRiseTimeValue = new MetroFramework.Controls.MetroLink();
             this.WindowContainer = new System.Windows.Forms.TableLayoutPanel();
             this.PlotTabs = new MetroFramework.Controls.MetroTabControl();
             this.GlobalTab = new MetroFramework.Controls.MetroTabPage();
@@ -82,6 +96,8 @@
             this.AxPlot = new OxyPlot.WindowsForms.PlotView();
             this.AyTab = new MetroFramework.Controls.MetroTabPage();
             this.AyPlot = new OxyPlot.WindowsForms.PlotView();
+            this.TheoryTravelTimeValue = new MetroFramework.Controls.MetroLink();
+            this.RealTravelTimeValue = new MetroFramework.Controls.MetroLink();
             this.InputContainer.SuspendLayout();
             this.AngContainer.SuspendLayout();
             this.MassContainer.SuspendLayout();
@@ -93,6 +109,7 @@
             this.PlanetContainer1.SuspendLayout();
             this.PlanetContainer2.SuspendLayout();
             this.PlanetContainer3.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.WindowContainer.SuspendLayout();
             this.PlotTabs.SuspendLayout();
             this.GlobalTab.SuspendLayout();
@@ -123,6 +140,7 @@
             this.InputContainer.Controls.Add(this.PlanetContainer1, 0, 2);
             this.InputContainer.Controls.Add(this.PlanetContainer2, 1, 2);
             this.InputContainer.Controls.Add(this.PlanetContainer3, 2, 2);
+            this.InputContainer.Controls.Add(this.tableLayoutPanel1, 3, 1);
             this.InputContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InputContainer.Location = new System.Drawing.Point(2, 2);
             this.InputContainer.Margin = new System.Windows.Forms.Padding(2);
@@ -131,6 +149,7 @@
             this.InputContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.InputContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.InputContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.InputContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.InputContainer.Size = new System.Drawing.Size(734, 156);
             this.InputContainer.TabIndex = 0;
             // 
@@ -756,6 +775,177 @@
             this.JupiterG.UseSelectable = true;
             this.JupiterG.Click += new System.EventHandler(this.JupiterG_Click);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.RealRiseTimeValue, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.HRealValue, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.TravelTimeLabel, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.SLabel, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.RiseTimeLabel, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.HInfolabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.RealLabel, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.ValuesLabel, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.TheoryLabel, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.HTheoryValue, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.STheoryValue, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.SRealValue, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.TheoryRiseTimeValue, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.TheoryTravelTimeValue, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.RealTravelTimeValue, 2, 4);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(552, 43);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.InputContainer.SetRowSpan(this.tableLayoutPanel1, 2);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(179, 114);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // RealRiseTimeValue
+            // 
+            this.RealRiseTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RealRiseTimeValue.Location = new System.Drawing.Point(123, 49);
+            this.RealRiseTimeValue.Name = "RealRiseTimeValue";
+            this.RealRiseTimeValue.Size = new System.Drawing.Size(51, 14);
+            this.RealRiseTimeValue.TabIndex = 11;
+            this.RealRiseTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RealRiseTimeValue.UseSelectable = true;
+            // 
+            // HRealValue
+            // 
+            this.HRealValue.AutoSize = true;
+            this.HRealValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HRealValue.Location = new System.Drawing.Point(123, 24);
+            this.HRealValue.Name = "HRealValue";
+            this.HRealValue.Size = new System.Drawing.Size(51, 20);
+            this.HRealValue.TabIndex = 7;
+            // 
+            // TravelTimeLabel
+            // 
+            this.TravelTimeLabel.AutoSize = true;
+            this.TravelTimeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TravelTimeLabel.Location = new System.Drawing.Point(5, 90);
+            this.TravelTimeLabel.Name = "TravelTimeLabel";
+            this.TravelTimeLabel.Size = new System.Drawing.Size(51, 22);
+            this.TravelTimeLabel.TabIndex = 5;
+            this.TravelTimeLabel.Text = "Travel time";
+            this.TravelTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SLabel
+            // 
+            this.SLabel.AutoSize = true;
+            this.SLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SLabel.Location = new System.Drawing.Point(5, 68);
+            this.SLabel.Name = "SLabel";
+            this.SLabel.Size = new System.Drawing.Size(51, 20);
+            this.SLabel.TabIndex = 4;
+            this.SLabel.Text = "L max";
+            this.SLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // RiseTimeLabel
+            // 
+            this.RiseTimeLabel.AutoSize = true;
+            this.RiseTimeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RiseTimeLabel.Location = new System.Drawing.Point(5, 46);
+            this.RiseTimeLabel.Name = "RiseTimeLabel";
+            this.RiseTimeLabel.Size = new System.Drawing.Size(51, 20);
+            this.RiseTimeLabel.TabIndex = 4;
+            this.RiseTimeLabel.Text = "Rise time";
+            this.RiseTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // HInfolabel
+            // 
+            this.HInfolabel.AutoSize = true;
+            this.HInfolabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HInfolabel.Location = new System.Drawing.Point(5, 24);
+            this.HInfolabel.Name = "HInfolabel";
+            this.HInfolabel.Size = new System.Drawing.Size(51, 20);
+            this.HInfolabel.TabIndex = 4;
+            this.HInfolabel.Text = "H max";
+            this.HInfolabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // RealLabel
+            // 
+            this.RealLabel.AutoSize = true;
+            this.RealLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RealLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.RealLabel.Location = new System.Drawing.Point(123, 2);
+            this.RealLabel.Name = "RealLabel";
+            this.RealLabel.Size = new System.Drawing.Size(51, 20);
+            this.RealLabel.TabIndex = 4;
+            this.RealLabel.Text = "Real";
+            this.RealLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ValuesLabel
+            // 
+            this.ValuesLabel.AutoSize = true;
+            this.ValuesLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ValuesLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.ValuesLabel.Location = new System.Drawing.Point(5, 2);
+            this.ValuesLabel.Name = "ValuesLabel";
+            this.ValuesLabel.Size = new System.Drawing.Size(51, 20);
+            this.ValuesLabel.TabIndex = 0;
+            this.ValuesLabel.Text = "Values";
+            this.ValuesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TheoryLabel
+            // 
+            this.TheoryLabel.AutoSize = true;
+            this.TheoryLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TheoryLabel.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.TheoryLabel.Location = new System.Drawing.Point(64, 2);
+            this.TheoryLabel.Name = "TheoryLabel";
+            this.TheoryLabel.Size = new System.Drawing.Size(51, 20);
+            this.TheoryLabel.TabIndex = 1;
+            this.TheoryLabel.Text = "Theory";
+            this.TheoryLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HTheoryValue
+            // 
+            this.HTheoryValue.AutoSize = true;
+            this.HTheoryValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HTheoryValue.Location = new System.Drawing.Point(64, 24);
+            this.HTheoryValue.Name = "HTheoryValue";
+            this.HTheoryValue.Size = new System.Drawing.Size(51, 20);
+            this.HTheoryValue.TabIndex = 6;
+            // 
+            // STheoryValue
+            // 
+            this.STheoryValue.AutoSize = true;
+            this.STheoryValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.STheoryValue.Location = new System.Drawing.Point(64, 68);
+            this.STheoryValue.Name = "STheoryValue";
+            this.STheoryValue.Size = new System.Drawing.Size(51, 20);
+            this.STheoryValue.TabIndex = 8;
+            // 
+            // SRealValue
+            // 
+            this.SRealValue.AutoSize = true;
+            this.SRealValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SRealValue.Location = new System.Drawing.Point(123, 68);
+            this.SRealValue.Name = "SRealValue";
+            this.SRealValue.Size = new System.Drawing.Size(51, 20);
+            this.SRealValue.TabIndex = 9;
+            // 
+            // TheoryRiseTimeValue
+            // 
+            this.TheoryRiseTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TheoryRiseTimeValue.Location = new System.Drawing.Point(64, 49);
+            this.TheoryRiseTimeValue.Name = "TheoryRiseTimeValue";
+            this.TheoryRiseTimeValue.Size = new System.Drawing.Size(51, 14);
+            this.TheoryRiseTimeValue.TabIndex = 10;
+            this.TheoryRiseTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TheoryRiseTimeValue.UseSelectable = true;
+            // 
             // WindowContainer
             // 
             this.WindowContainer.ColumnCount = 1;
@@ -866,7 +1056,7 @@
             this.STab.Margin = new System.Windows.Forms.Padding(2);
             this.STab.Name = "STab";
             this.STab.Padding = new System.Windows.Forms.Padding(2);
-            this.STab.Size = new System.Drawing.Size(726, 372);
+            this.STab.Size = new System.Drawing.Size(726, 366);
             this.STab.TabIndex = 3;
             this.STab.Text = "S(t)";
             this.STab.UseVisualStyleBackColor = true;
@@ -881,7 +1071,7 @@
             this.SPlot.Margin = new System.Windows.Forms.Padding(2);
             this.SPlot.Name = "SPlot";
             this.SPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.SPlot.Size = new System.Drawing.Size(722, 368);
+            this.SPlot.Size = new System.Drawing.Size(722, 362);
             this.SPlot.TabIndex = 0;
             this.SPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.SPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -897,7 +1087,7 @@
             this.VTab.Margin = new System.Windows.Forms.Padding(2);
             this.VTab.Name = "VTab";
             this.VTab.Padding = new System.Windows.Forms.Padding(2);
-            this.VTab.Size = new System.Drawing.Size(726, 372);
+            this.VTab.Size = new System.Drawing.Size(726, 366);
             this.VTab.TabIndex = 4;
             this.VTab.Text = "V(t)";
             this.VTab.UseVisualStyleBackColor = true;
@@ -912,7 +1102,7 @@
             this.VPlot.Margin = new System.Windows.Forms.Padding(2);
             this.VPlot.Name = "VPlot";
             this.VPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VPlot.Size = new System.Drawing.Size(722, 368);
+            this.VPlot.Size = new System.Drawing.Size(722, 362);
             this.VPlot.TabIndex = 0;
             this.VPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -928,7 +1118,7 @@
             this.VxTab.Margin = new System.Windows.Forms.Padding(2);
             this.VxTab.Name = "VxTab";
             this.VxTab.Padding = new System.Windows.Forms.Padding(2);
-            this.VxTab.Size = new System.Drawing.Size(726, 372);
+            this.VxTab.Size = new System.Drawing.Size(726, 366);
             this.VxTab.TabIndex = 5;
             this.VxTab.Text = "Vx(t)";
             this.VxTab.UseVisualStyleBackColor = true;
@@ -943,7 +1133,7 @@
             this.VxPlot.Margin = new System.Windows.Forms.Padding(2);
             this.VxPlot.Name = "VxPlot";
             this.VxPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VxPlot.Size = new System.Drawing.Size(722, 368);
+            this.VxPlot.Size = new System.Drawing.Size(722, 362);
             this.VxPlot.TabIndex = 0;
             this.VxPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VxPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -959,7 +1149,7 @@
             this.VyTab.Margin = new System.Windows.Forms.Padding(2);
             this.VyTab.Name = "VyTab";
             this.VyTab.Padding = new System.Windows.Forms.Padding(2);
-            this.VyTab.Size = new System.Drawing.Size(726, 372);
+            this.VyTab.Size = new System.Drawing.Size(726, 366);
             this.VyTab.TabIndex = 6;
             this.VyTab.Text = "Vy(t)";
             this.VyTab.UseVisualStyleBackColor = true;
@@ -974,7 +1164,7 @@
             this.VyPlot.Margin = new System.Windows.Forms.Padding(2);
             this.VyPlot.Name = "VyPlot";
             this.VyPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.VyPlot.Size = new System.Drawing.Size(722, 368);
+            this.VyPlot.Size = new System.Drawing.Size(722, 362);
             this.VyPlot.TabIndex = 0;
             this.VyPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.VyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -990,7 +1180,7 @@
             this.ATab.Margin = new System.Windows.Forms.Padding(2);
             this.ATab.Name = "ATab";
             this.ATab.Padding = new System.Windows.Forms.Padding(2);
-            this.ATab.Size = new System.Drawing.Size(726, 372);
+            this.ATab.Size = new System.Drawing.Size(726, 366);
             this.ATab.TabIndex = 7;
             this.ATab.Text = "A(t)";
             this.ATab.UseVisualStyleBackColor = true;
@@ -1004,7 +1194,7 @@
             this.APlot.Location = new System.Drawing.Point(2, 2);
             this.APlot.Name = "APlot";
             this.APlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.APlot.Size = new System.Drawing.Size(722, 368);
+            this.APlot.Size = new System.Drawing.Size(722, 362);
             this.APlot.TabIndex = 0;
             this.APlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.APlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1020,7 +1210,7 @@
             this.AxTab.Margin = new System.Windows.Forms.Padding(2);
             this.AxTab.Name = "AxTab";
             this.AxTab.Padding = new System.Windows.Forms.Padding(2);
-            this.AxTab.Size = new System.Drawing.Size(726, 372);
+            this.AxTab.Size = new System.Drawing.Size(726, 366);
             this.AxTab.TabIndex = 8;
             this.AxTab.Text = "Ax(t)";
             this.AxTab.UseVisualStyleBackColor = true;
@@ -1034,7 +1224,7 @@
             this.AxPlot.Location = new System.Drawing.Point(2, 2);
             this.AxPlot.Name = "AxPlot";
             this.AxPlot.PanCursor = System.Windows.Forms.Cursors.Hand;
-            this.AxPlot.Size = new System.Drawing.Size(722, 368);
+            this.AxPlot.Size = new System.Drawing.Size(722, 362);
             this.AxPlot.TabIndex = 0;
             this.AxPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.AxPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
@@ -1070,6 +1260,26 @@
             this.AyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.AyPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
+            // TheoryTravelTimeValue
+            // 
+            this.TheoryTravelTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TheoryTravelTimeValue.Location = new System.Drawing.Point(64, 93);
+            this.TheoryTravelTimeValue.Name = "TheoryTravelTimeValue";
+            this.TheoryTravelTimeValue.Size = new System.Drawing.Size(51, 16);
+            this.TheoryTravelTimeValue.TabIndex = 12;
+            this.TheoryTravelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TheoryTravelTimeValue.UseSelectable = true;
+            // 
+            // RealTravelTimeValue
+            // 
+            this.RealTravelTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RealTravelTimeValue.Location = new System.Drawing.Point(123, 93);
+            this.RealTravelTimeValue.Name = "RealTravelTimeValue";
+            this.RealTravelTimeValue.Size = new System.Drawing.Size(51, 16);
+            this.RealTravelTimeValue.TabIndex = 13;
+            this.RealTravelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RealTravelTimeValue.UseSelectable = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1101,6 +1311,8 @@
             this.PlanetContainer1.ResumeLayout(false);
             this.PlanetContainer2.ResumeLayout(false);
             this.PlanetContainer3.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.WindowContainer.ResumeLayout(false);
             this.PlotTabs.ResumeLayout(false);
             this.GlobalTab.ResumeLayout(false);
@@ -1172,6 +1384,22 @@
         private MetroFramework.Controls.MetroTextBox KInput;
         private MetroFramework.Controls.MetroTabPage GlobalTab;
         private OxyPlot.WindowsForms.PlotView GlobalPlot;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private MetroFramework.Controls.MetroLabel ValuesLabel;
+        private MetroFramework.Controls.MetroLabel TravelTimeLabel;
+        private MetroFramework.Controls.MetroLabel SLabel;
+        private MetroFramework.Controls.MetroLabel RiseTimeLabel;
+        private MetroFramework.Controls.MetroLabel HInfolabel;
+        private MetroFramework.Controls.MetroLabel RealLabel;
+        private MetroFramework.Controls.MetroLabel TheoryLabel;
+        private MetroFramework.Controls.MetroLabel HRealValue;
+        private MetroFramework.Controls.MetroLabel HTheoryValue;
+        private MetroFramework.Controls.MetroLabel STheoryValue;
+        private MetroFramework.Controls.MetroLabel SRealValue;
+        private MetroFramework.Controls.MetroLink TheoryRiseTimeValue;
+        private MetroFramework.Controls.MetroLink RealRiseTimeValue;
+        private MetroFramework.Controls.MetroLink TheoryTravelTimeValue;
+        private MetroFramework.Controls.MetroLink RealTravelTimeValue;
     }
 }
 

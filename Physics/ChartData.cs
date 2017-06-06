@@ -15,7 +15,8 @@ namespace Physics
     {
         public double theory {get; set; }
         public double real { get; set; }
-        private LineSeries theoryData, realData;
+        public LineSeries theoryData { get; private set; }
+        public LineSeries realData { get; private set; }
         private PlotModel model;
         public Tracker tracker { get; private set; }
 

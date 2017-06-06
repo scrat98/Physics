@@ -30,6 +30,9 @@ namespace Physics
         public double minX { get; set; }
         public double maxX { get; set; }
 
+        public int RealHMax { get; private set; } = 0;      // point for the Hmax in RealData
+        public int TheoryHMax { get; private set;  } = 0;   // point for the Hmax in TheoryData
+
         public Charts(MainWindow _window)
         {
             window = _window;
@@ -119,54 +122,82 @@ namespace Physics
             VelocityInit();
             AccelerationInit();
 
-            double TheoryT = 0;
-            double TheoryDt = 0;
+            double curT = 0;
+            double Dt = window.delay;
+            bool realFalled = false;
+            bool realEnd = false;
 
-            double RealT = 0;
-            double RealDt = 0;
+            bool theoryFalled = false;
+            bool theoryEnd = false;
 
             while (true)
             {
-                // theory update
-                if(H.theory >= 0)
+                // Dt calculate TODO
+                Dt = window.delay;
+
+                if(H.theory > 0 && (H.theory + Vy.theory * Dt + Ay.theory * Math.Pow(Dt, 2) / 2) < 0)
                 {
-                    // Dt calculate TODO
-                    TheoryDt = window.delay;
+                    Dt = (-2 * Vy.theory - Math.Sqrt(4 * Math.Pow(Vy.theory, 2) - 8 * Ay.theory * H.theory)) / (2 * Ay.theory);
+                    theoryFalled = true;
+                }
 
-                    TheoryT += TheoryDt;
+                if (H.real > 0 && (H.real + Vy.real * Dt + Ay.real * Math.Pow(Dt, 2) / 2) < 0)
+                {
+                    Dt = (-2 * Vy.real - Math.Sqrt(4 * Math.Pow(Vy.real, 2) - 8 * Ay.real * H.real)) / (2 * Ay.real);
+                    realFalled = true;
+                }
+                curT += Dt;
 
-                    H.TheoryUpdate(H.theory + Vy.theory * TheoryDt + Ay.theory * Math.Pow(TheoryDt, 2) / 2, TheoryT);
-                    S.TheoryUpdate(S.theory + Vx.theory * TheoryDt + Ax.theory * Math.Pow(TheoryDt, 2) / 2, TheoryT);
+                // theory update
+                if (H.theory >= 0 && !theoryEnd)
+                {
+                    if (theoryFalled == true)
+                    {
+                        H.TheoryUpdate(0, curT);
+                        theoryEnd = true;
+                    }
+                    else
+                    {
+                        if (Vy.theory * Dt + Ay.theory * Math.Pow(Dt, 2) >= 0) TheoryHMax = H.theoryData.Points.Count;
+                        H.TheoryUpdate(H.theory + Vy.theory * Dt + Ay.theory * Math.Pow(Dt, 2) / 2, curT);
+                    }
+
+                    S.TheoryUpdate(S.theory + Vx.theory * Dt + Ax.theory * Math.Pow(Dt, 2) / 2, curT);
                     Global.TheoryUpdate(H.theory, S.theory);
 
-                    Vx.TheoryUpdate(Vx.theory, TheoryT);
-                    Vy.TheoryUpdate(Vy.theory + Ay.theory * TheoryDt, TheoryT);
-                    V.TheoryUpdate(Math.Sqrt(Math.Pow(Vx.theory, 2) + Math.Pow(Vy.theory, 2)), TheoryT);
+                    Vx.TheoryUpdate(Vx.theory, curT);
+                    Vy.TheoryUpdate(Vy.theory + Ay.theory * Dt, curT);
+                    V.TheoryUpdate(Math.Sqrt(Math.Pow(Vx.theory, 2) + Math.Pow(Vy.theory, 2)), curT);
 
-                    Ax.TheoryUpdate(0, TheoryT);
-                    Ay.TheoryUpdate(-window.arguments.g.value, TheoryT);
-                    A.TheoryUpdate(Math.Sqrt(Math.Pow(Ax.theory, 2) + Math.Pow(Ay.theory, 2)), TheoryT);
+                    Ax.TheoryUpdate(0, curT);
+                    Ay.TheoryUpdate(-window.arguments.g.value, curT);
+                    A.TheoryUpdate(Math.Sqrt(Math.Pow(Ax.theory, 2) + Math.Pow(Ay.theory, 2)), curT);
                 }
 
                 // real update
-                if (H.real >= 0)
+                if (H.real >= 0 && !realEnd)
                 {
-                    // Dt calculate TODO
-                    RealDt = window.delay;
+                    if (realFalled == true)
+                    {
+                        H.RealUpdate(0, curT);
+                        realEnd = true;
+                    }
+                    else
+                    {
+                        if (Vy.real * Dt + Ay.real * Math.Pow(Dt, 2) / 2 >= 0) RealHMax = H.realData.Points.Count;
+                        H.RealUpdate(H.real + Vy.real * Dt + Ay.real * Math.Pow(Dt, 2) / 2, curT);
+                    }
 
-                    RealT += RealDt;
-
-                    H.RealUpdate(H.real + Vy.real * RealDt + Ay.real * Math.Pow(RealDt, 2) / 2, RealT);
-                    S.RealUpdate(S.real + Vx.real * RealDt + Ax.real * Math.Pow(RealDt, 2) / 2, RealT);
+                    S.RealUpdate(S.real + Vx.real * Dt + Ax.real * Math.Pow(Dt, 2) / 2, curT);
                     Global.RealUpdate(H.real, S.real);
 
-                    Vx.RealUpdate(Vx.real + Ax.real * RealDt, RealT);
-                    Vy.RealUpdate(Vy.real + Ay.real * RealDt, RealT);
-                    V.RealUpdate(Math.Sqrt(Math.Pow(Vx.real, 2) + Math.Pow(Vy.real, 2)), RealT);
+                    Vx.RealUpdate(Vx.real + Ax.real * Dt, curT);
+                    Vy.RealUpdate(Vy.real + Ay.real * Dt, curT);
+                    V.RealUpdate(Math.Sqrt(Math.Pow(Vx.real, 2) + Math.Pow(Vy.real, 2)), curT);
 
-                    Ax.RealUpdate(getFx() / window.arguments.mass.value, RealT);
-                    Ay.RealUpdate(-window.arguments.g.value + getFy() / window.arguments.mass.value, RealT);
-                    A.RealUpdate(Math.Sqrt(Math.Pow(Ax.real, 2) + Math.Pow(Ay.real, 2)), RealT);
+                    Ax.RealUpdate(getFx() / window.arguments.mass.value, curT);
+                    Ay.RealUpdate(-window.arguments.g.value + getFy() / window.arguments.mass.value, curT);
+                    A.RealUpdate(Math.Sqrt(Math.Pow(Ax.real, 2) + Math.Pow(Ay.real, 2)), curT);
                 }
 
                 // exit if we are falled
@@ -174,6 +205,7 @@ namespace Physics
             }
 
             window.PlotsUpdate();
+            window.InformationUpdate();
         }
     }
 }
