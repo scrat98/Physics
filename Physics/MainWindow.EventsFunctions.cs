@@ -158,7 +158,7 @@ namespace Physics
         private void UranusG_Click(object sender, EventArgs e)
         {
             gInput.Text = "8,43";
-            PInput.Text = "296,55";
+            PInput.Text = "0,012";
         }
 
         private void NeptuneG_Click(object sender, EventArgs e)
