@@ -97,34 +97,50 @@ namespace Physics
                 case 1:
                     charts.GlobalPoint = charts.H.tracker.point;
                     charts.GlobalX = charts.H.tracker.X;
+                    charts.minX = HeightPlot.Model.Axes[0].ActualMinimum;
+                    charts.maxX = HeightPlot.Model.Axes[0].ActualMaximum;
                     break;
                 case 2:
                     charts.GlobalPoint = charts.S.tracker.point;
                     charts.GlobalX = charts.S.tracker.X;
+                    charts.minX = SPlot.Model.Axes[0].ActualMinimum;
+                    charts.maxX = SPlot.Model.Axes[0].ActualMaximum;
                     break;
                 case 3:
                     charts.GlobalPoint = charts.V.tracker.point;
                     charts.GlobalX = charts.V.tracker.X;
+                    charts.minX = VPlot.Model.Axes[0].ActualMinimum;
+                    charts.maxX = VPlot.Model.Axes[0].ActualMaximum;
                     break;
                 case 4:
                     charts.GlobalPoint = charts.Vx.tracker.point;
                     charts.GlobalX = charts.Vx.tracker.X;
+                    charts.minX = VxPlot.Model.Axes[0].ActualMinimum;
+                    charts.maxX = VxPlot.Model.Axes[0].ActualMaximum;
                     break;
                 case 5:
                     charts.GlobalPoint = charts.Vy.tracker.point;
                     charts.GlobalX = charts.Vy.tracker.X;
+                    charts.minX = VyPlot.Model.Axes[0].ActualMinimum;
+                    charts.maxX = VyPlot.Model.Axes[0].ActualMaximum;
                     break;
                 case 6:
                     charts.GlobalPoint = charts.A.tracker.point;
                     charts.GlobalX = charts.A.tracker.X;
+                    charts.minX = APlot.Model.Axes[0].ActualMinimum;
+                    charts.maxX = APlot.Model.Axes[0].ActualMaximum;
                     break;
                 case 7:
                     charts.GlobalPoint = charts.Ax.tracker.point;
                     charts.GlobalX = charts.Ax.tracker.X;
+                    charts.minX = AxPlot.Model.Axes[0].ActualMinimum;
+                    charts.maxX = AxPlot.Model.Axes[0].ActualMaximum;
                     break;
                 case 8:
                     charts.GlobalPoint = charts.Ay.tracker.point;
                     charts.GlobalX = charts.Ay.tracker.X;
+                    charts.minX = AyPlot.Model.Axes[0].ActualMinimum;
+                    charts.maxX = AyPlot.Model.Axes[0].ActualMaximum;
                     break;
             }
 
@@ -132,27 +148,43 @@ namespace Physics
             {
                 case 1:
                     charts.H.NewX(charts.GlobalX, charts.GlobalPoint);
+                    if(charts.minX != charts.maxX) HeightPlot.Model.Axes[0].Zoom(charts.minX, charts.maxX);
+                    HeightPlot.Model.Axes[1].Reset();
                     break;
                 case 2:
                     charts.S.NewX(charts.GlobalX, charts.GlobalPoint);
+                    if (charts.minX != charts.maxX) SPlot.Model.Axes[0].Zoom(charts.minX, charts.maxX);
+                    SPlot.Model.Axes[1].Reset();
                     break;
                 case 3:
                     charts.V.NewX(charts.GlobalX, charts.GlobalPoint);
+                    if (charts.minX != charts.maxX) VPlot.Model.Axes[0].Zoom(charts.minX, charts.maxX);
+                    VPlot.Model.Axes[1].Reset();
                     break;
                 case 4:
                     charts.Vx.NewX(charts.GlobalX, charts.GlobalPoint);
+                    if (charts.minX != charts.maxX) VxPlot.Model.Axes[0].Zoom(charts.minX, charts.maxX);
+                    VxPlot.Model.Axes[1].Reset();
                     break;
                 case 5:
                     charts.Vy.NewX(charts.GlobalX, charts.GlobalPoint);
+                    if (charts.minX != charts.maxX) VyPlot.Model.Axes[0].Zoom(charts.minX, charts.maxX);
+                    VyPlot.Model.Axes[1].Reset();
                     break;
                 case 6:
                     charts.A.NewX(charts.GlobalX, charts.GlobalPoint);
+                    if (charts.minX != charts.maxX) APlot.Model.Axes[0].Zoom(charts.minX, charts.maxX);
+                    APlot.Model.Axes[1].Reset();
                     break;
                 case 7:
                     charts.Ax.NewX(charts.GlobalX, charts.GlobalPoint);
+                    if (charts.minX != charts.maxX) AxPlot.Model.Axes[0].Zoom(charts.minX, charts.maxX);
+                    AxPlot.Model.Axes[1].Reset();
                     break;
                 case 8:
                     charts.Ay.NewX(charts.GlobalX, charts.GlobalPoint);
+                    if (charts.minX != charts.maxX) AyPlot.Model.Axes[0].Zoom(charts.minX, charts.maxX);
+                    AyPlot.Model.Axes[1].Reset();
                     break;
             }
 

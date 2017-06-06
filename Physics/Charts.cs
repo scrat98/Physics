@@ -27,6 +27,8 @@ namespace Physics
 
         public int GlobalPoint { get; set; }
         public double GlobalX { get; set; }
+        public double minX { get; set; }
+        public double maxX { get; set; }
 
         public Charts(MainWindow _window)
         {
