@@ -172,5 +172,25 @@ namespace Physics
             gInput.Text = "0,81";
             PInput.Text = "0";
         }
+
+        private void TheoryRiseTimeValue_Click(object sender, EventArgs e)
+        {
+            NewTrackerPosition(0, charts.TheoryHMax);
+        }
+
+        private void RealRiseTimeValue_Click(object sender, EventArgs e)
+        {
+            NewTrackerPosition(0, charts.RealHMax);
+        }
+
+        private void TheoryTravelTimeValue_Click(object sender, EventArgs e)
+        {
+            NewTrackerPosition(0, charts.H.theoryData.Points.Count - 1);
+        }
+
+        private void RealTravelTimeValue_Click(object sender, EventArgs e)
+        {
+            NewTrackerPosition(0, charts.H.realData.Points.Count - 1);
+        }
     }
 }

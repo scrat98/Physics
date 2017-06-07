@@ -76,6 +76,8 @@
             this.STheoryValue = new MetroFramework.Controls.MetroLabel();
             this.SRealValue = new MetroFramework.Controls.MetroLabel();
             this.TheoryRiseTimeValue = new MetroFramework.Controls.MetroLink();
+            this.TheoryTravelTimeValue = new MetroFramework.Controls.MetroLink();
+            this.RealTravelTimeValue = new MetroFramework.Controls.MetroLink();
             this.WindowContainer = new System.Windows.Forms.TableLayoutPanel();
             this.PlotTabs = new MetroFramework.Controls.MetroTabControl();
             this.GlobalTab = new MetroFramework.Controls.MetroTabPage();
@@ -96,8 +98,6 @@
             this.AxPlot = new OxyPlot.WindowsForms.PlotView();
             this.AyTab = new MetroFramework.Controls.MetroTabPage();
             this.AyPlot = new OxyPlot.WindowsForms.PlotView();
-            this.TheoryTravelTimeValue = new MetroFramework.Controls.MetroLink();
-            this.RealTravelTimeValue = new MetroFramework.Controls.MetroLink();
             this.InputContainer.SuspendLayout();
             this.AngContainer.SuspendLayout();
             this.MassContainer.SuspendLayout();
@@ -819,6 +819,7 @@
             this.RealRiseTimeValue.TabIndex = 11;
             this.RealRiseTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RealRiseTimeValue.UseSelectable = true;
+            this.RealRiseTimeValue.Click += new System.EventHandler(this.RealRiseTimeValue_Click);
             // 
             // HRealValue
             // 
@@ -945,6 +946,29 @@
             this.TheoryRiseTimeValue.TabIndex = 10;
             this.TheoryRiseTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TheoryRiseTimeValue.UseSelectable = true;
+            this.TheoryRiseTimeValue.Click += new System.EventHandler(this.TheoryRiseTimeValue_Click);
+            // 
+            // TheoryTravelTimeValue
+            // 
+            this.TheoryTravelTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TheoryTravelTimeValue.Location = new System.Drawing.Point(64, 93);
+            this.TheoryTravelTimeValue.Name = "TheoryTravelTimeValue";
+            this.TheoryTravelTimeValue.Size = new System.Drawing.Size(51, 16);
+            this.TheoryTravelTimeValue.TabIndex = 12;
+            this.TheoryTravelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TheoryTravelTimeValue.UseSelectable = true;
+            this.TheoryTravelTimeValue.Click += new System.EventHandler(this.TheoryTravelTimeValue_Click);
+            // 
+            // RealTravelTimeValue
+            // 
+            this.RealTravelTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RealTravelTimeValue.Location = new System.Drawing.Point(123, 93);
+            this.RealTravelTimeValue.Name = "RealTravelTimeValue";
+            this.RealTravelTimeValue.Size = new System.Drawing.Size(51, 16);
+            this.RealTravelTimeValue.TabIndex = 13;
+            this.RealTravelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RealTravelTimeValue.UseSelectable = true;
+            this.RealTravelTimeValue.Click += new System.EventHandler(this.RealTravelTimeValue_Click);
             // 
             // WindowContainer
             // 
@@ -1259,26 +1283,6 @@
             this.AyPlot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
             this.AyPlot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
             this.AyPlot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
-            // 
-            // TheoryTravelTimeValue
-            // 
-            this.TheoryTravelTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TheoryTravelTimeValue.Location = new System.Drawing.Point(64, 93);
-            this.TheoryTravelTimeValue.Name = "TheoryTravelTimeValue";
-            this.TheoryTravelTimeValue.Size = new System.Drawing.Size(51, 16);
-            this.TheoryTravelTimeValue.TabIndex = 12;
-            this.TheoryTravelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.TheoryTravelTimeValue.UseSelectable = true;
-            // 
-            // RealTravelTimeValue
-            // 
-            this.RealTravelTimeValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RealTravelTimeValue.Location = new System.Drawing.Point(123, 93);
-            this.RealTravelTimeValue.Name = "RealTravelTimeValue";
-            this.RealTravelTimeValue.Size = new System.Drawing.Size(51, 16);
-            this.RealTravelTimeValue.TabIndex = 13;
-            this.RealTravelTimeValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RealTravelTimeValue.UseSelectable = true;
             // 
             // MainWindow
             // 

@@ -13,6 +13,11 @@ using OxyPlot.Series;
 using OxyPlot.Axes;
 using OxyPlot.Annotations;
 
+using MetroFramework;
+using MetroFramework.Forms;
+using MetroFramework.Controls;
+using MetroFramework.Components;
+
 namespace Physics
 {
     public partial class MainWindow
@@ -209,6 +214,45 @@ namespace Physics
             }
 
             curTabInd = e.TabPageIndex;
+        }
+
+        public ChartData GetCurrentChartData()
+        {
+            switch (curTabInd)
+            {
+                case 0:
+                    return charts.Global;
+                case 1:
+                    return charts.H;
+                case 2:
+                    return charts.S;
+                case 3:
+                    return charts.V;
+                case 4:
+                    return charts.Vx;
+                case 5:
+                    return charts.Vy;
+                case 6:
+                    return charts.A;
+                case 7:
+                    return charts.Ax;
+                case 8:
+                    return charts.Ay;
+            }
+
+            return null;
+        }
+
+        public void NewTrackerPosition(double x)
+        {
+            ChartData chart = GetCurrentChartData();
+            if(chart != null && chart != charts.Global) chart.NewX(x);
+        }
+
+        public void NewTrackerPosition(double x, int point)
+        {
+            ChartData chart = GetCurrentChartData();
+            if (chart != null && chart != charts.Global) chart.NewX(x, point);
         }
 
         public void Log()
