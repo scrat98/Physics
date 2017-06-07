@@ -257,6 +257,7 @@ namespace Physics
 
         public void Log()
         {
+#if DEBUG
             Console.Clear();
             if (arguments.mass.ok)
                 Console.WriteLine("mass: " + arguments.mass.value);
@@ -293,6 +294,7 @@ namespace Physics
             else
                 Console.WriteLine("g: ERROR ");
             Console.WriteLine();
+#endif
         }
     }
 }
